@@ -10,7 +10,7 @@ const TicTacToe = () => {
   const [winner, setWinner] = useState(null);
   const [winningLine, setWinningLine] = useState([]);
   const [scores, setScores] = useState({ x: 0, o: 0, draws: 0 });
-  const [showRules, setShowRules] = useState(false);
+  const [showRules, setShowRules] = useState(true);
 
   useEffect(() => {
     const saved = localStorage.getItem('/tic-tac-toe-scores');
