@@ -10,65 +10,51 @@ const HomePage = () => {
       description: 'Classic snake game with progressive difficulty. Eat food, grow longer, avoid walls and yourself!',
       icon: Zap,
       path: '/snake',
-      color: 'text-green-600',
-      difficulty: 'Easy'
+      color: 'text-green-600'
     },
     {
       title: 'Tic Tac Toe',
       description: 'Challenge the AI or play with a friend. Three in a row wins!',
       icon: Grid3x3,
       path: '/tic-tac-toe',
-      color: 'text-blue-600',
-      difficulty: 'Easy'
+      color: 'text-blue-600'
     },
     {
       title: 'Wordle',
       description: 'Unlimited word guessing game. Find the 5-letter word in 6 tries!',
       icon: AlignJustify,
       path: '/wordle',
-      color: 'text-yellow-600',
-      difficulty: 'Medium'
+      color: 'text-yellow-600'
     },
     {
       title: 'Tetris',
       description: 'Arrange falling blocks to clear lines. Speed increases as you progress!',
       icon: Target,
       path: '/tetris',
-      color: 'text-purple-600',
-      difficulty: 'Medium'
+      color: 'text-purple-600'
     },
     {
       title: 'Pac-Man',
       description: 'Navigate mazes, eat dots, avoid ghosts. Multiple challenging levels!',
-      icon: Sparkles,
+      icon: Ghost,
       path: '/pacman',
-      color: 'text-orange-600',
-      difficulty: 'Hard'
+      color: 'text-orange-600'
     },
     {
       title: 'Flappy Bird',
       description: 'Tap to flap through pipes. Simple controls, challenging gameplay!',
       icon: Bird,
       path: '/flappy-bird',
-      color: 'text-cyan-600',
-      difficulty: 'Hard'
+      color: 'text-cyan-600'
     },
     {
       title: 'Fruit Ninja',
       description: 'Slice fruits, avoid bombs. Test your reflexes and accuracy!',
       icon: Apple,
       path: '/fruit-ninja',
-      color: 'text-red-600',
-      difficulty: 'Medium'
+      color: 'text-red-600'
     }
   ];
-
-  const [totalGames, setTotalGames] = useState(0);
-
-  useEffect(() => {
-    const played = localStorage.getItem('total-games-played');
-    setTotalGames(played ? parseInt(played) : 0);
-  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
