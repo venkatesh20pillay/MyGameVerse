@@ -26,7 +26,7 @@ const TetrisGame = () => {
   const [level, setLevel] = useState(1);
   const [lines, setLines] = useState(0);
   const [highScore, setHighScore] = useState(0);
-  const [showRules, setShowRules] = useState(false);
+  const [showRules, setShowRules] = useState(true);
   const [speed, setSpeed] = useState(1000);
 
   useEffect(() => {
