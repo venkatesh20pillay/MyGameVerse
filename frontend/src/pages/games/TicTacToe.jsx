@@ -218,7 +218,6 @@ const TicTacToe = () => {
         <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
           <div className="text-center mb-6">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Tic-Tac-Toe</h1>
-            <p className="text-gray-600">Difficulty: <span className="font-semibold text-blue-600">Easy</span></p>
           </div>
 
           {!gameMode ? (
