@@ -13,7 +13,7 @@ const FruitNinjaGame = () => {
   const [lives, setLives] = useState(3);
   const [gameOver, setGameOver] = useState(false);
   const [started, setStarted] = useState(false);
-  const [showRules, setShowRules] = useState(false);
+  const [showRules, setShowRules] = useState(true);
   const [slashLines, setSlashLines] = useState([]);
   const [combo, setCombo] = useState(0);
   const canvasRef = useRef(null);
