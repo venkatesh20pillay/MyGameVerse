@@ -19,7 +19,7 @@ const SnakeGame = () => {
   const [highScore, setHighScore] = useState(0);
   const [speed, setSpeed] = useState(INITIAL_SPEED);
   const [level, setLevel] = useState(1);
-  const [showRules, setShowRules] = useState(false);
+  const [showRules, setShowRules] = useState(true);
   const directionRef = useRef(INITIAL_DIRECTION);
 
   useEffect(() => {
