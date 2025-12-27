@@ -17,7 +17,7 @@ const WordleGame = () => {
   const [gameOver, setGameOver] = useState(false);
   const [won, setWon] = useState(false);
   const [stats, setStats] = useState({ played: 0, won: 0, streak: 0 });
-  const [showRules, setShowRules] = useState(false);
+  const [showRules, setShowRules] = useState(true);
   const [shake, setShake] = useState(false);
 
   useEffect(() => {
@@ -92,9 +92,33 @@ const WordleGame = () => {
   const getCellColor = (letter, position, word) => {
     if (!word) return 'bg-gray-100 border-gray-300';
     
-    if (letter === targetWord[position]) {
+    // Count letter occurrences in target word
+    const targetLetterCount = {};
+    for (let char of targetWord) {
+      targetLetterCount[char] = (targetLetterCount[char] || 0) + 1;
+    }
+    
+    // First pass: mark exact matches
+    const cellStates = Array(5).fill('absent');
+    for (let i = 0; i < 5; i++) {
+      if (word[i] === targetWord[i]) {
+        cellStates[i] = 'correct';
+        targetLetterCount[word[i]]--;
+      }
+    }
+    
+    // Second pass: mark present letters
+    for (let i = 0; i < 5; i++) {
+      if (cellStates[i] === 'absent' && targetLetterCount[word[i]] > 0) {
+        cellStates[i] = 'present';
+        targetLetterCount[word[i]]--;
+      }
+    }
+    
+    const state = cellStates[position];
+    if (state === 'correct') {
       return 'bg-green-500 text-white border-green-500';
-    } else if (targetWord.includes(letter)) {
+    } else if (state === 'present') {
       return 'bg-yellow-500 text-white border-yellow-500';
     } else {
       return 'bg-gray-400 text-white border-gray-400';
@@ -105,16 +129,37 @@ const WordleGame = () => {
     let color = 'bg-gray-300 hover:bg-gray-400';
     
     for (let guess of guesses) {
+      // Count letter occurrences in target word
+      const targetLetterCount = {};
+      for (let char of targetWord) {
+        targetLetterCount[char] = (targetLetterCount[char] || 0) + 1;
+      }
+      
+      // First pass: mark exact matches
+      const keyStates = {};
       for (let i = 0; i < guess.length; i++) {
-        if (guess[i] === key) {
-          if (guess[i] === targetWord[i]) {
-            return 'bg-green-500 text-white';
-          } else if (targetWord.includes(key)) {
-            color = 'bg-yellow-500 text-white';
-          } else {
-            color = 'bg-gray-500 text-white';
-          }
+        if (guess[i] === targetWord[i]) {
+          keyStates[guess[i]] = 'correct';
+          targetLetterCount[guess[i]]--;
         }
+      }
+      
+      // Second pass: mark present letters
+      for (let i = 0; i < guess.length; i++) {
+        if (!keyStates[guess[i]] && targetLetterCount[guess[i]] > 0) {
+          keyStates[guess[i]] = 'present';
+          targetLetterCount[guess[i]]--;
+        } else if (!keyStates[guess[i]]) {
+          keyStates[guess[i]] = 'absent';
+        }
+      }
+      
+      if (keyStates[key] === 'correct') {
+        return 'bg-green-500 text-white';
+      } else if (keyStates[key] === 'present' && color !== 'bg-green-500 text-white') {
+        color = 'bg-yellow-500 text-white';
+      } else if (keyStates[key] === 'absent' && !color.includes('bg-green') && !color.includes('bg-yellow')) {
+        color = 'bg-gray-500 text-white';
       }
     }
     return color;
@@ -183,7 +228,6 @@ const WordleGame = () => {
         <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
           <div className="text-center mb-6">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Wordle Unlimited</h1>
-            <p className="text-gray-600">Difficulty: <span className="font-semibold text-yellow-600">Medium</span></p>
           </div>
 
           {/* Stats */}
