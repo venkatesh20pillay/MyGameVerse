@@ -276,7 +276,6 @@ const TetrisGame = () => {
         <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
           <div className="text-center mb-6">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Tetris</h1>
-            <p className="text-gray-600">Difficulty: <span className="font-semibold text-purple-600">Medium</span></p>
           </div>
 
           <div className="flex flex-col md:flex-row justify-center items-start gap-6">
