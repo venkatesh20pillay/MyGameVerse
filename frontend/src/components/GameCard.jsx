@@ -1,19 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Trophy, Clock } from 'lucide-react';
 
-const GameCard = ({ title, description, icon: Icon, path, color, difficulty }) => {
+const GameCard = ({ title, description, icon: Icon, path, color }) => {
   const getHighScore = () => {
     const score = localStorage.getItem(`${path}-highscore`);
     return score ? parseInt(score) : 0;
-  };
-
-  const getDifficultyColor = (diff) => {
-    switch(diff) {
-      case 'Easy': return 'text-green-600 bg-green-50';
-      case 'Medium': return 'text-yellow-600 bg-yellow-50';
-      case 'Hard': return 'text-red-600 bg-red-50';
-      default: return 'text-gray-600 bg-gray-50';
-    }
   };
 
   return (
@@ -23,9 +14,6 @@ const GameCard = ({ title, description, icon: Icon, path, color, difficulty }) =
           <div className={`p-3 rounded-xl ${color} bg-opacity-10 group-hover:scale-110 transition-transform`}>
             <Icon className={`w-8 h-8 ${color}`} />
           </div>
-          <span className={`px-3 py-1 rounded-full text-xs font-medium ${getDifficultyColor(difficulty)}`}>
-            {difficulty}
-          </span>
         </div>
         
         <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
