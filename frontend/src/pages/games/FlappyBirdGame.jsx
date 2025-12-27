@@ -19,7 +19,7 @@ const FlappyBirdGame = () => {
   const [highScore, setHighScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [started, setStarted] = useState(false);
-  const [showRules, setShowRules] = useState(false);
+  const [showRules, setShowRules] = useState(true);
   const gameLoopRef = useRef(null);
   const pipeTimerRef = useRef(null);
 
