@@ -151,9 +151,12 @@ const PrivacyPage = () => {
                 <AlertCircle className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Questions or Concerns?</h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 text-sm mb-2">
                     If you have any questions about this privacy policy or how we handle your data, 
-                    please feel free to reach out to us through our contact channels.
+                    please feel free to reach out to us.
+                  </p>
+                  <p className="text-gray-900 font-medium text-sm">
+                    Contact: <a href="mailto:saverapps20@gmail.com" className="text-indigo-600 hover:text-indigo-700 underline">saverapps20@gmail.com</a>
                   </p>
                 </div>
               </div>
