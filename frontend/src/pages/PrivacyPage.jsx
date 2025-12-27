@@ -132,7 +132,7 @@ const PrivacyPage = () => {
               </li>
               <li className="flex items-start">
                 <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full mt-2 mr-3"></span>
-                <span><strong>Delete:</strong> Clear your browser's local storage to remove all GameVerse data</span>
+                <span><strong>Delete:</strong> Clear your browser's local storage to remove all My Game Verse data</span>
               </li>
               <li className="flex items-start">
                 <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full mt-2 mr-3"></span>
