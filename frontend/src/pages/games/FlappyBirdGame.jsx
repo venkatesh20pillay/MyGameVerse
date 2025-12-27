@@ -191,7 +191,6 @@ const FlappyBirdGame = () => {
         <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
           <div className="text-center mb-6">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Flappy Bird</h1>
-            <p className="text-gray-600">Difficulty: <span className="font-semibold text-cyan-600">Hard</span></p>
           </div>
 
           <div className="flex justify-center space-x-8 mb-6">
