@@ -82,6 +82,26 @@ code {
     }
 }
 
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.animate-shake {
+  animation: shake 0.5s;
+}
+
+.animate-pop {
+  animation: pop 0.1s;
+}
+
 @layer base {
     [data-debug-wrapper="true"] {
         display: contents !important;
