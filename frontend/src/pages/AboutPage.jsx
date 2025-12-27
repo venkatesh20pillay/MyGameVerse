@@ -68,7 +68,7 @@ const AboutPage = () => {
               without compromising the original gameplay experience that made them legendary.
             </p>
 
-            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">Why GameVerse?</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">Why My Game Verse?</h2>
             <ul className="space-y-3 text-gray-600">
               <li className="flex items-start">
                 <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full mt-2 mr-3"></span>
