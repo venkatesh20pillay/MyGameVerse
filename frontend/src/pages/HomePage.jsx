@@ -85,8 +85,7 @@ const HomePage = () => {
         </div>
 
         {/* Ad Space Placeholder */}
-        <div className="mb-12 bg-gradient-to-r from-gray-100 to-gray-200 rounded-xl p-8 text-center border border-gray-300 border-dashed">
-          <p className="text-gray-500 text-sm">Advertisement Space</p>
+        <div className="mb-12 bg-gradient-to-r from-gray-100 to-gray-200 rounded-xl p-8 border border-gray-300 border-dashed min-h-[120px]">
         </div>
 
         {/* Games Grid */}
