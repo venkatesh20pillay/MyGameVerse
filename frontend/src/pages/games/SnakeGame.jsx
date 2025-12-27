@@ -198,11 +198,9 @@ const SnakeGame = () => {
         )}
 
         <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
-          <div className="flex flex-col md:flex-row items-center justify-between mb-6 space-y-4 md:space-y-0">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">Snake Game</h1>
-              <p className="text-gray-600">Difficulty: <span className="font-semibold text-green-600">Easy</span></p>
-            </div>
+          <div className="text-center mb-6">
+            <h1 className="text-3xl font-bold text-gray-900 mb-2\">Snake Game</h1>
+          </div>
             <div className="flex space-x-6">
               <div className="text-center">
                 <p className="text-gray-600 text-sm">Score</p>
