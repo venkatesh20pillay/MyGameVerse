@@ -20,7 +20,7 @@ const PrivacyPage = () => {
           <div className="prose prose-lg max-w-none">
             <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-6 mb-8">
               <p className="text-indigo-900 font-medium">
-                At GameVerse, your privacy is our priority. We believe in transparency and want you to understand 
+                At My Game Verse, your privacy is our priority. We believe in transparency and want you to understand 
                 exactly how we handle your data.
               </p>
             </div>
