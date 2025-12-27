@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import GameCard from '../components/GameCard';
-import { Sparkles, Zap, Target, Grid3x3, AlignJustify, Bird, Apple } from 'lucide-react';
+import { Sparkles, Zap, Target, Grid3x3, AlignJustify, Bird, Apple, Ghost } from 'lucide-react';
 
 const HomePage = () => {
   const games = [
