@@ -50,7 +50,7 @@ const PacManGame = () => {
   const [highScore, setHighScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [isPaused, setIsPaused] = useState(true);
-  const [showRules, setShowRules] = useState(false);
+  const [showRules, setShowRules] = useState(true);
   const [powerMode, setPowerMode] = useState(false);
   const directionRef = useRef({ x: 0, y: 0 });
 
