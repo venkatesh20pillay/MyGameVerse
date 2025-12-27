@@ -57,7 +57,7 @@ const PrivacyPage = () => {
               <span>Information We Collect</span>
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              GameVerse collects minimal information to provide you with the best gaming experience:
+              My Game Verse collects minimal information to provide you with the best gaming experience:
             </p>
             <div className="bg-gray-50 rounded-lg p-4 mb-6">
               <h3 className="font-semibold text-gray-900 mb-3">Local Storage Data:</h3>
