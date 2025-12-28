@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import GameCard from '../components/GameCard';
-import { Sparkles, Zap, Target, Grid3x3, AlignJustify, Bird, Apple, Ghost } from 'lucide-react';
+import { Sparkles, Zap, Target, Grid3x3, AlignJustify, Bird, Ghost } from 'lucide-react';
 
 const HomePage = () => {
   const games = [
@@ -46,13 +46,6 @@ const HomePage = () => {
       icon: Bird,
       path: '/flappy-bird',
       color: 'text-cyan-600'
-    },
-    {
-      title: 'Fruit Ninja',
-      description: 'Slice fruits, avoid bombs. Test your reflexes and accuracy!',
-      icon: Apple,
-      path: '/fruit-ninja',
-      color: 'text-red-600'
     }
   ];
 
