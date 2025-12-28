@@ -7,7 +7,6 @@ import WordleGame from './pages/games/WordleGame';
 import TetrisGame from './pages/games/TetrisGame';
 import PacManGame from './pages/games/PacManGame';
 import FlappyBirdGame from './pages/games/FlappyBirdGame';
-import FruitNinjaGame from './pages/games/FruitNinjaGame';
 import AboutPage from './pages/AboutPage';
 import PrivacyPage from './pages/PrivacyPage';
 
@@ -23,7 +22,6 @@ function App() {
           <Route path="/tetris" element={<TetrisGame />} />
           <Route path="/pacman" element={<PacManGame />} />
           <Route path="/flappy-bird" element={<FlappyBirdGame />} />
-          <Route path="/fruit-ninja" element={<FruitNinjaGame />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
         </Routes>
