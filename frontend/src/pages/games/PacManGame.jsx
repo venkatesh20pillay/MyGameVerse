@@ -325,13 +325,16 @@ const PacManGame = () => {
               ))}
 
               {/* Pac-Man */}
-              <div
-                className="absolute bg-yellow-400 rounded-full transition-all duration-100"
+              <img
+                src="https://customer-assets.emergentagent.com/job_87d90b3d-c607-4715-962e-75fc56d14e8a/artifacts/n22eyt01_magichour_ai-gif-generator-2025-12-29-f9c2f58b-4f3d-4171-986e-6c30a26a01c3.gif"
+                alt="Pac-Man"
+                className="absolute transition-all duration-100"
                 style={{
-                  width: CELL_SIZE - 4,
-                  height: CELL_SIZE - 4,
-                  left: pacman.x * CELL_SIZE + 2,
-                  top: pacman.y * CELL_SIZE + 2
+                  width: CELL_SIZE - 2,
+                  height: CELL_SIZE - 2,
+                  left: pacman.x * CELL_SIZE + 1,
+                  top: pacman.y * CELL_SIZE + 1,
+                  imageRendering: 'pixelated'
                 }}
               />
 
