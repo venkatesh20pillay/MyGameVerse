@@ -54,6 +54,15 @@ const PacManGame = () => {
   const [powerMode, setPowerMode] = useState(false);
   const directionRef = useRef({ x: 0, y: 0 });
 
+  const getRotation = () => {
+    const dir = directionRef.current;
+    if (dir.x === 1 && dir.y === 0) return 0;      // Right
+    if (dir.x === 0 && dir.y === 1) return 90;     // Down
+    if (dir.x === -1 && dir.y === 0) return 180;   // Left
+    if (dir.x === 0 && dir.y === -1) return 270;   // Up
+    return 0; // Default
+  };
+
   useEffect(() => {
     const saved = localStorage.getItem('/pacman-highscore');
     if (saved) setHighScore(parseInt(saved));
