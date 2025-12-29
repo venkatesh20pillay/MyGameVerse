@@ -4,7 +4,7 @@ import { ArrowLeft, Play, RotateCcw, Trophy, Info } from 'lucide-react';
 
 const GAME_WIDTH = 400;
 const GAME_HEIGHT = 600;
-const BIRD_SIZE = 30;
+const BIRD_SIZE = 40;
 const PIPE_WIDTH = 60;
 const PIPE_GAP = 150;
 const GRAVITY = 0.5;
