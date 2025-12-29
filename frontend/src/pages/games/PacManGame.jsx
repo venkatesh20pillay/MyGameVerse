@@ -56,11 +56,11 @@ const PacManGame = () => {
 
   const getRotation = () => {
     const dir = direction;
-    if (dir.x === 1 && dir.y === 0) return 0;      // Right
-    if (dir.x === 0 && dir.y === 1) return 90;     // Down
-    if (dir.x === -1 && dir.y === 0) return 180;   // Left
-    if (dir.x === 0 && dir.y === -1) return 270;   // Up
-    return 0; // Default
+    if (dir.x === 1 && dir.y === 0) return 'rotate(0deg)';        // Right
+    if (dir.x === 0 && dir.y === 1) return 'rotate(90deg)';       // Down
+    if (dir.x === -1 && dir.y === 0) return 'scaleX(-1)';         // Left (flip horizontally)
+    if (dir.x === 0 && dir.y === -1) return 'rotate(-90deg)';     // Up
+    return 'rotate(0deg)'; // Default
   };
 
   useEffect(() => {
