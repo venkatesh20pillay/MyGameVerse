@@ -234,7 +234,9 @@ const FlappyBirdGame = () => {
                   left: GAME_WIDTH / 2 - BIRD_SIZE / 2,
                   top: birdY,
                   transform: `rotate(${Math.min(Math.max(birdVelocity * 3, -20), 45)}deg)`,
-                  imageRendering: 'auto'
+                  imageRendering: 'auto',
+                  clipPath: 'ellipse(45% 48% at 50% 50%)',
+                  backgroundColor: 'transparent'
                 }}
               />
 
