@@ -9,12 +9,12 @@ const AboutPage = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            About My Game Verse
+            About Multi Game Verse
           </h1>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              Welcome to My Game Verse, your ultimate destination for classic arcade games reimagined for the modern web. 
+              Welcome to Multi Game Verse, your ultimate destination for classic arcade games reimagined for the modern web. 
               We believe that the best games are timeless, and we're dedicated to bringing you the most beloved 
               gaming experiences in a clean, accessible format.
             </p>
