@@ -250,8 +250,8 @@ const SnakeGame = () => {
                 return (
                   <div
                     key={index}
-                    className={`absolute transition-all ${
-                      isHead ? 'bg-green-400 rounded-full' : 'bg-green-500'
+                    className={`absolute transition-all rounded-full ${
+                      isHead ? 'bg-green-400' : 'bg-green-500'
                     }`}
                     style={{
                       width: CELL_SIZE - 2,
