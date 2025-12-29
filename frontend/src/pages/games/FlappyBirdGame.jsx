@@ -225,7 +225,7 @@ const FlappyBirdGame = () => {
 
               {/* Bird */}
               <img
-                src="https://customer-assets.emergentagent.com/job_87d90b3d-c607-4715-962e-75fc56d14e8a/artifacts/czkdhhb9_magichour_ai_gif-2025-12-29-512x512-cmjrgigaq00566a0zz8mqnro6.gif"
+                src="https://customer-assets.emergentagent.com/job_87d90b3d-c607-4715-962e-75fc56d14e8a/artifacts/tjb3od3r_flying%20red%20bird%20GIF%20by%20PlayKids.gif"
                 alt="Bird"
                 className="absolute transition-all duration-75 shadow-lg"
                 style={{
@@ -234,7 +234,7 @@ const FlappyBirdGame = () => {
                   left: GAME_WIDTH / 2 - BIRD_SIZE / 2,
                   top: birdY,
                   transform: `rotate(${Math.min(Math.max(birdVelocity * 3, -20), 45)}deg)`,
-                  imageRendering: 'pixelated'
+                  imageRendering: 'auto'
                 }}
               />
 
