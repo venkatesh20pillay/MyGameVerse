@@ -316,13 +316,12 @@ const FlappyBirdGame = () => {
               <button
                 onClick={(e) => {
                   e.stopPropagation();
-                  if (!started) jump();
+                  handleStart();
                 }}
-                disabled={started && !gameOver}
-                className="flex items-center space-x-2 px-6 py-3 bg-cyan-600 hover:bg-cyan-700 disabled:bg-gray-400 text-white rounded-lg transition-colors"
+                className="flex items-center space-x-2 px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors"
               >
                 <Play className="w-5 h-5" />
-                <span>Start</span>
+                <span>{gameOver ? 'Play Again' : 'Start'}</span>
               </button>
               <button
                 onClick={(e) => {
