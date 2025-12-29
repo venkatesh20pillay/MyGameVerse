@@ -94,7 +94,7 @@ const AboutPage = () => {
 
             <div className="mt-12 p-6 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border border-indigo-100">
               <p className="text-gray-700 text-center">
-                Thank you for choosing My Game Verse. We hope you enjoy your gaming experience!
+                Thank you for choosing Multi Game Verse. We hope you enjoy your gaming experience!
               </p>
             </div>
           </div>
