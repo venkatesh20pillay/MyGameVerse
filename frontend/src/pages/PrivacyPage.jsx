@@ -112,7 +112,7 @@ const PrivacyPage = () => {
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Cookies</h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              My Game Verse does not use cookies. We rely entirely on browser local storage for data persistence, 
+              Multi Game Verse does not use cookies. We rely entirely on browser local storage for data persistence, 
               which provides better privacy and control over your data.
             </p>
 
