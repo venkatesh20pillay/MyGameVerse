@@ -344,7 +344,7 @@ const PacManGame = () => {
                   left: pacman.x * CELL_SIZE + 1,
                   top: pacman.y * CELL_SIZE + 1,
                   imageRendering: 'pixelated',
-                  transform: `rotate(${getRotation()}deg)`
+                  transform: getRotation()
                 }}
               />
 
