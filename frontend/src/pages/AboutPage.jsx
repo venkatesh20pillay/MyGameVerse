@@ -63,7 +63,7 @@ const AboutPage = () => {
 
             <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">Our Mission</h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              At My Game Verse, we're on a mission to preserve gaming history while making it accessible to everyone. 
+              At Multi Game Verse, we're on a mission to preserve gaming history while making it accessible to everyone. 
               We carefully recreate classic games with modern technology, ensuring they run smoothly on any device 
               without compromising the original gameplay experience that made them legendary.
             </p>
