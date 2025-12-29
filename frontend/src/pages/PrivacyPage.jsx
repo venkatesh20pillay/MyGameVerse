@@ -30,7 +30,7 @@ const PrivacyPage = () => {
               <span>Data Storage</span>
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              My Game Verse uses <strong>browser local storage</strong> exclusively to save your game progress, 
+              Multi Game Verse uses <strong>browser local storage</strong> exclusively to save your game progress, 
               high scores, and preferences. This means:
             </p>
             <ul className="space-y-2 text-gray-600 mb-6">
