@@ -93,7 +93,7 @@ const PrivacyPage = () => {
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4\">Third-Party Services</h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              My Game Verse may use third-party advertising services in the future. If implemented, we will:
+              Multi Game Verse may use third-party advertising services in the future. If implemented, we will:
             </p>
             <ul className="space-y-2 text-gray-600 mb-6">
               <li className="flex items-start">
