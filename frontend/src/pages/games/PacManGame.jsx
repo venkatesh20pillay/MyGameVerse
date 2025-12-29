@@ -55,7 +55,7 @@ const PacManGame = () => {
   const directionRef = useRef({ x: 0, y: 0 });
 
   const getRotation = () => {
-    const dir = directionRef.current;
+    const dir = direction;
     if (dir.x === 1 && dir.y === 0) return 0;      // Right
     if (dir.x === 0 && dir.y === 1) return 90;     // Down
     if (dir.x === -1 && dir.y === 0) return 180;   // Left
