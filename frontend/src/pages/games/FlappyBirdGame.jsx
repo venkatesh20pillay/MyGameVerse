@@ -224,18 +224,19 @@ const FlappyBirdGame = () => {
               <div className="absolute bottom-0 w-full h-20 bg-green-600" />
 
               {/* Bird */}
-              <div
-                className="absolute bg-yellow-400 rounded-full transition-all duration-75 shadow-lg"
+              <img
+                src="https://customer-assets.emergentagent.com/job_87d90b3d-c607-4715-962e-75fc56d14e8a/artifacts/arzgq626_ChatGPT%20Image%20Dec%2029%2C%202025%2C%2011_09_31%20PM.png"
+                alt="Bird"
+                className="absolute transition-all duration-75 shadow-lg"
                 style={{
                   width: BIRD_SIZE,
                   height: BIRD_SIZE,
                   left: GAME_WIDTH / 2 - BIRD_SIZE / 2,
                   top: birdY,
-                  transform: `rotate(${Math.min(Math.max(birdVelocity * 3, -20), 45)}deg)`
+                  transform: `rotate(${Math.min(Math.max(birdVelocity * 3, -20), 45)}deg)`,
+                  imageRendering: 'auto'
                 }}
-              >
-                <div className="absolute w-2 h-2 bg-black rounded-full top-2 right-2" />
-              </div>
+              />
 
               {/* Pipes */}
               {pipes.map((pipe, index) => (
