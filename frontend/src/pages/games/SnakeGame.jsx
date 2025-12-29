@@ -50,6 +50,17 @@ const SnakeGame = () => {
     setLevel(1);
   };
 
+  const handleStart = () => {
+    if (gameOver) {
+      // If game is over, reset and start
+      resetGame();
+      setTimeout(() => setIsPaused(false), 50);
+    } else {
+      // Otherwise just start
+      setIsPaused(false);
+    }
+  };
+
   const moveSnake = useCallback(() => {
     if (gameOver || isPaused) return;
 
