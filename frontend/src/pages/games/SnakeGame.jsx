@@ -48,6 +48,8 @@ const SnakeGame = () => {
       return () => clearTimeout(resetTimer);
     }
   }, [gameOver]);
+
+  const resetGame = () => {
     setSnake(INITIAL_SNAKE);
     setDirection(INITIAL_DIRECTION);
     directionRef.current = INITIAL_DIRECTION;
