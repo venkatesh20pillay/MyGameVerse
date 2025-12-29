@@ -38,7 +38,16 @@ const SnakeGame = () => {
     return newFood;
   }, [snake]);
 
-  const resetGame = () => {
+  useEffect(() => {
+    if (gameOver) {
+      // Auto-reset after game over
+      const resetTimer = setTimeout(() => {
+        resetGame();
+      }, 2000); // Wait 2 seconds then auto-reset
+      
+      return () => clearTimeout(resetTimer);
+    }
+  }, [gameOver]);
     setSnake(INITIAL_SNAKE);
     setDirection(INITIAL_DIRECTION);
     directionRef.current = INITIAL_DIRECTION;
