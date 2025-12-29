@@ -43,6 +43,17 @@ const FlappyBirdGame = () => {
     setStarted(false);
   };
 
+  const handleStart = () => {
+    if (gameOver) {
+      // If game is over, reset and start
+      resetGame();
+      setTimeout(() => setStarted(true), 50);
+    } else {
+      // Otherwise just start
+      setStarted(true);
+    }
+  };
+
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (e.key === ' ' || e.key === 'ArrowUp') {
