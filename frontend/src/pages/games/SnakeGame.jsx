@@ -324,12 +324,19 @@ const SnakeGame = () => {
             <div className="mt-6 flex flex-col items-center space-y-4">
               <div className="flex space-x-3">
                 <button
+                  onClick={handleStart}
+                  className="flex items-center space-x-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
+                >
+                  {isPaused && !gameOver ? <Play className="w-5 h-5" /> : <RotateCcw className="w-5 h-5" />}
+                  <span>{gameOver ? 'Play Again' : isPaused ? 'Start' : 'Resume'}</span>
+                </button>
+                <button
                   onClick={() => setIsPaused(!isPaused)}
                   disabled={gameOver}
-                  className="flex items-center space-x-2 px-6 py-3 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white rounded-lg transition-colors"
+                  className="flex items-center space-x-2 px-6 py-3 bg-gray-600 hover:bg-gray-700 disabled:bg-gray-400 text-white rounded-lg transition-colors"
                 >
                   {isPaused ? <Play className="w-5 h-5" /> : <Pause className="w-5 h-5" />}
-                  <span>{isPaused ? 'Start' : 'Pause'}</span>
+                  <span>{isPaused ? 'Resume' : 'Pause'}</span>
                 </button>
                 <button
                   onClick={resetGame}
