@@ -263,7 +263,7 @@ const SnakeGame = () => {
                         zIndex: isHead ? 10 : 5
                       }}
                     >
-                      {/* Snake head eyes */}
+                      {/* Snake head eyes - always visible, no animation */}
                       {isHead && (
                         <>
                           <div
