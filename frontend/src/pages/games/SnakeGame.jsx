@@ -246,54 +246,37 @@ const SnakeGame = () => {
               {/* Snake */}
               {snake.map((segment, index) => {
                 const isHead = index === 0;
-                const isTail = index === snake.length - 1;
                 
                 return (
-                  <div key={index}>
-                    {/* Snake segment */}
-                    <div
-                      className={`absolute transition-all ${
-                        isHead ? 'bg-green-400 rounded-full' : 'bg-green-500 rounded-lg'
-                      }`}
-                      style={{
-                        width: CELL_SIZE - 2,
-                        height: CELL_SIZE - 2,
-                        left: segment.x * CELL_SIZE,
-                        top: segment.y * CELL_SIZE,
-                        zIndex: isHead ? 10 : 5
-                      }}
-                    >
-                      {/* Snake head eyes - always visible, no animation */}
-                      {isHead && (
-                        <>
-                          <div
-                            className="absolute w-1.5 h-1.5 bg-white rounded-full"
-                            style={{ top: '6px', left: '5px' }}
-                          >
-                            <div className="absolute w-1 h-1 bg-black rounded-full top-0 left-0.5" />
-                          </div>
-                          <div
-                            className="absolute w-1.5 h-1.5 bg-white rounded-full"
-                            style={{ top: '6px', right: '5px' }}
-                          >
-                            <div className="absolute w-1 h-1 bg-black rounded-full top-0 left-0.5" />
-                          </div>
-                        </>
-                      )}
-                    </div>
-                    
-                    {/* Connector between segments for smooth appearance */}
-                    {index < snake.length - 1 && (
-                      <div
-                        className="absolute bg-green-500"
-                        style={{
-                          width: CELL_SIZE - 4,
-                          height: CELL_SIZE - 4,
-                          left: segment.x * CELL_SIZE + 2,
-                          top: segment.y * CELL_SIZE + 2,
-                          zIndex: 4
-                        }}
-                      />
+                  <div
+                    key={index}
+                    className={`absolute transition-all ${
+                      isHead ? 'bg-green-400 rounded-full' : 'bg-green-500'
+                    }`}
+                    style={{
+                      width: CELL_SIZE - 2,
+                      height: CELL_SIZE - 2,
+                      left: segment.x * CELL_SIZE,
+                      top: segment.y * CELL_SIZE,
+                      zIndex: isHead ? 10 : 5
+                    }}
+                  >
+                    {/* Snake head eyes - always visible, no animation */}
+                    {isHead && (
+                      <>
+                        <div
+                          className="absolute w-1.5 h-1.5 bg-white rounded-full"
+                          style={{ top: '6px', left: '5px' }}
+                        >
+                          <div className="absolute w-1 h-1 bg-black rounded-full top-0 left-0.5" />
+                        </div>
+                        <div
+                          className="absolute w-1.5 h-1.5 bg-white rounded-full"
+                          style={{ top: '6px', right: '5px' }}
+                        >
+                          <div className="absolute w-1 h-1 bg-black rounded-full top-0 left-0.5" />
+                        </div>
+                      </>
                     )}
                   </div>
                 );
