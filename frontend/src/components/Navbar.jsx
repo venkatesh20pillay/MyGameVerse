@@ -11,7 +11,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2 group">
             <Gamepad2 className="w-8 h-8 text-indigo-600 group-hover:text-indigo-700 transition-colors" />
             <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              My Game Verse
+              Multi Game Verse
             </span>
           </Link>
           

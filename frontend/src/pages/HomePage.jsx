@@ -118,7 +118,7 @@ const HomePage = () => {
       <footer className="bg-white border-t border-gray-200 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-600 text-sm">© 2025 My Game Verse. All rights reserved.</p>
+            <p className="text-gray-600 text-sm">© 2025 Multi Game Verse. All rights reserved.</p>
             <div className="flex space-x-6">
               <a href="/about" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">About Us</a>
               <a href="/privacy" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Privacy Policy</a>

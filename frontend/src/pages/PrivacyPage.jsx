@@ -20,7 +20,7 @@ const PrivacyPage = () => {
           <div className="prose prose-lg max-w-none">
             <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-6 mb-8">
               <p className="text-indigo-900 font-medium">
-                At My Game Verse, your privacy is our priority. We believe in transparency and want you to understand 
+                At Multi Game Verse, your privacy is our priority. We believe in transparency and want you to understand 
                 exactly how we handle your data.
               </p>
             </div>
@@ -30,7 +30,7 @@ const PrivacyPage = () => {
               <span>Data Storage</span>
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              My Game Verse uses <strong>browser local storage</strong> exclusively to save your game progress, 
+              Multi Game Verse uses <strong>browser local storage</strong> exclusively to save your game progress, 
               high scores, and preferences. This means:
             </p>
             <ul className="space-y-2 text-gray-600 mb-6">
@@ -57,7 +57,7 @@ const PrivacyPage = () => {
               <span>Information We Collect</span>
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              My Game Verse collects minimal information to provide you with the best gaming experience:
+              Multi Game Verse collects minimal information to provide you with the best gaming experience:
             </p>
             <div className="bg-gray-50 rounded-lg p-4 mb-6">
               <h3 className="font-semibold text-gray-900 mb-3">Local Storage Data:</h3>
@@ -93,7 +93,7 @@ const PrivacyPage = () => {
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4\">Third-Party Services</h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              My Game Verse may use third-party advertising services in the future. If implemented, we will:
+              Multi Game Verse may use third-party advertising services in the future. If implemented, we will:
             </p>
             <ul className="space-y-2 text-gray-600 mb-6">
               <li className="flex items-start">
@@ -112,13 +112,13 @@ const PrivacyPage = () => {
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Cookies</h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              My Game Verse does not use cookies. We rely entirely on browser local storage for data persistence, 
+              Multi Game Verse does not use cookies. We rely entirely on browser local storage for data persistence, 
               which provides better privacy and control over your data.
             </p>
 
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Children's Privacy</h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              My Game Verse is suitable for all ages. Since we don't collect any personal information, 
+              Multi Game Verse is suitable for all ages. Since we don't collect any personal information, 
               there are no special considerations for children's privacy. However, we recommend parental 
               guidance for younger players.
             </p>
@@ -132,7 +132,7 @@ const PrivacyPage = () => {
               </li>
               <li className="flex items-start">
                 <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full mt-2 mr-3"></span>
-                <span><strong>Delete:</strong> Clear your browser's local storage to remove all My Game Verse data</span>
+                <span><strong>Delete:</strong> Clear your browser's local storage to remove all Multi Game Verse data</span>
               </li>
               <li className="flex items-start">
                 <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full mt-2 mr-3"></span>

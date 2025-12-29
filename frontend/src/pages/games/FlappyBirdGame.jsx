@@ -4,7 +4,7 @@ import { ArrowLeft, Play, RotateCcw, Trophy, Info } from 'lucide-react';
 
 const GAME_WIDTH = 400;
 const GAME_HEIGHT = 600;
-const BIRD_SIZE = 30;
+const BIRD_SIZE = 40;
 const PIPE_WIDTH = 60;
 const PIPE_GAP = 150;
 const GRAVITY = 0.5;
@@ -41,6 +41,17 @@ const FlappyBirdGame = () => {
     setScore(0);
     setGameOver(false);
     setStarted(false);
+  };
+
+  const handleStart = () => {
+    if (gameOver) {
+      // If game is over, reset and start
+      resetGame();
+      setTimeout(() => setStarted(true), 50);
+    } else {
+      // Otherwise just start
+      setStarted(true);
+    }
   };
 
   useEffect(() => {
@@ -224,18 +235,21 @@ const FlappyBirdGame = () => {
               <div className="absolute bottom-0 w-full h-20 bg-green-600" />
 
               {/* Bird */}
-              <div
-                className="absolute bg-yellow-400 rounded-full transition-all duration-75 shadow-lg"
+              <img
+                src="https://customer-assets.emergentagent.com/job_87d90b3d-c607-4715-962e-75fc56d14e8a/artifacts/tjb3od3r_flying%20red%20bird%20GIF%20by%20PlayKids.gif"
+                alt="Bird"
+                className="absolute transition-all duration-75 shadow-lg"
                 style={{
                   width: BIRD_SIZE,
                   height: BIRD_SIZE,
                   left: GAME_WIDTH / 2 - BIRD_SIZE / 2,
                   top: birdY,
-                  transform: `rotate(${Math.min(Math.max(birdVelocity * 3, -20), 45)}deg)`
+                  transform: `rotate(${Math.min(Math.max(birdVelocity * 3, -20), 45)}deg)`,
+                  imageRendering: 'auto',
+                  clipPath: 'ellipse(45% 48% at 50% 50%)',
+                  backgroundColor: 'transparent'
                 }}
-              >
-                <div className="absolute w-2 h-2 bg-black rounded-full top-2 right-2" />
-              </div>
+              />
 
               {/* Pipes */}
               {pipes.map((pipe, index) => (
@@ -302,13 +316,12 @@ const FlappyBirdGame = () => {
               <button
                 onClick={(e) => {
                   e.stopPropagation();
-                  if (!started) jump();
+                  handleStart();
                 }}
-                disabled={started && !gameOver}
-                className="flex items-center space-x-2 px-6 py-3 bg-cyan-600 hover:bg-cyan-700 disabled:bg-gray-400 text-white rounded-lg transition-colors"
+                className="flex items-center space-x-2 px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors"
               >
                 <Play className="w-5 h-5" />
-                <span>Start</span>
+                <span>{gameOver ? 'Play Again' : 'Start'}</span>
               </button>
               <button
                 onClick={(e) => {

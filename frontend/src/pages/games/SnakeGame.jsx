@@ -50,6 +50,17 @@ const SnakeGame = () => {
     setLevel(1);
   };
 
+  const handleStart = () => {
+    if (gameOver) {
+      // If game is over, reset and start
+      resetGame();
+      setTimeout(() => setIsPaused(false), 50);
+    } else {
+      // Otherwise just start
+      setIsPaused(false);
+    }
+  };
+
   const moveSnake = useCallback(() => {
     if (gameOver || isPaused) return;
 
@@ -233,18 +244,43 @@ const SnakeGame = () => {
               }}
             >
               {/* Snake */}
-              {snake.map((segment, index) => (
-                <div
-                  key={index}
-                  className={`absolute ${index === 0 ? 'bg-green-400' : 'bg-green-500'} rounded-sm transition-all`}
-                  style={{
-                    width: CELL_SIZE - 2,
-                    height: CELL_SIZE - 2,
-                    left: segment.x * CELL_SIZE,
-                    top: segment.y * CELL_SIZE
-                  }}
-                />
-              ))}
+              {snake.map((segment, index) => {
+                const isHead = index === 0;
+                
+                return (
+                  <div
+                    key={index}
+                    className={`absolute transition-all rounded-full ${
+                      isHead ? 'bg-green-400' : 'bg-green-500'
+                    }`}
+                    style={{
+                      width: CELL_SIZE - 2,
+                      height: CELL_SIZE - 2,
+                      left: segment.x * CELL_SIZE,
+                      top: segment.y * CELL_SIZE,
+                      zIndex: isHead ? 10 : 5
+                    }}
+                  >
+                    {/* Snake head eyes - always visible, no animation */}
+                    {isHead && (
+                      <>
+                        <div
+                          className="absolute w-1.5 h-1.5 bg-white rounded-full"
+                          style={{ top: '6px', left: '5px' }}
+                        >
+                          <div className="absolute w-1 h-1 bg-black rounded-full top-0 left-0.5" />
+                        </div>
+                        <div
+                          className="absolute w-1.5 h-1.5 bg-white rounded-full"
+                          style={{ top: '6px', right: '5px' }}
+                        >
+                          <div className="absolute w-1 h-1 bg-black rounded-full top-0 left-0.5" />
+                        </div>
+                      </>
+                    )}
+                  </div>
+                );
+              })}
               
               {/* Food */}
               <div
@@ -288,12 +324,19 @@ const SnakeGame = () => {
             <div className="mt-6 flex flex-col items-center space-y-4">
               <div className="flex space-x-3">
                 <button
+                  onClick={handleStart}
+                  className="flex items-center space-x-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
+                >
+                  {isPaused && !gameOver ? <Play className="w-5 h-5" /> : <RotateCcw className="w-5 h-5" />}
+                  <span>{gameOver ? 'Play Again' : isPaused ? 'Start' : 'Resume'}</span>
+                </button>
+                <button
                   onClick={() => setIsPaused(!isPaused)}
                   disabled={gameOver}
-                  className="flex items-center space-x-2 px-6 py-3 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white rounded-lg transition-colors"
+                  className="flex items-center space-x-2 px-6 py-3 bg-gray-600 hover:bg-gray-700 disabled:bg-gray-400 text-white rounded-lg transition-colors"
                 >
                   {isPaused ? <Play className="w-5 h-5" /> : <Pause className="w-5 h-5" />}
-                  <span>{isPaused ? 'Start' : 'Pause'}</span>
+                  <span>{isPaused ? 'Resume' : 'Pause'}</span>
                 </button>
                 <button
                   onClick={resetGame}
