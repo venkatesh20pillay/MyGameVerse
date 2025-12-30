@@ -63,7 +63,7 @@ const HomePage = () => {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-            Play timeless arcade classics reimagined for today. No downloads, no accounts – just pure gaming fun.
+            Play timeless arcade classics reimagined for today. No downloads, no accounts – just pure gaming fun with Snake, Tetris, Pac-Man, Wordle, Tic-Tac-Toe, and Flappy Bird.
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
             <div className="flex items-center space-x-2">
@@ -90,28 +90,54 @@ const HomePage = () => {
 
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-          <div className="text-center p-6">
+          <article className="text-center p-6">
             <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mx-auto mb-4">
               <Sparkles className="w-6 h-6 text-indigo-600" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Instant Play</h3>
-            <p className="text-gray-600 text-sm">No installation required. Start playing immediately in your browser.</p>
-          </div>
-          <div className="text-center p-6">
+            <h2 className="text-lg font-semibold text-gray-900 mb-2">Instant Play</h2>
+            <p className="text-gray-600 text-sm">No installation required. Start playing immediately in your browser on any device.</p>
+          </article>
+          <article className="text-center p-6">
             <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
               <Target className="w-6 h-6 text-purple-600" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Save Progress</h3>
-            <p className="text-gray-600 text-sm">Your scores and achievements are saved locally on your device.</p>
-          </div>
-          <div className="text-center p-6">
+            <h2 className="text-lg font-semibold text-gray-900 mb-2">Save Progress</h2>
+            <p className="text-gray-600 text-sm">Your scores and achievements are saved locally on your device for continuous gameplay.</p>
+          </article>
+          <article className="text-center p-6">
             <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
               <Zap className="w-6 h-6 text-green-600" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Mobile Optimized</h3>
-            <p className="text-gray-600 text-sm">Fully responsive design with touch controls for mobile gaming.</p>
-          </div>
+            <h2 className="text-lg font-semibold text-gray-900 mb-2">Mobile Optimized</h2>
+            <p className="text-gray-600 text-sm">Fully responsive design with touch controls optimized for mobile and tablet gaming.</p>
+          </article>
         </div>
+
+        {/* SEO Content Section */}
+        <article className="mt-20 bg-white rounded-2xl shadow-lg p-8 md:p-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Play Classic Arcade Games Online - Free & Unblocked</h2>
+          <div className="prose prose-lg max-w-none text-gray-600">
+            <p className="mb-4">
+              Welcome to Multi Game Verse, your premier destination for playing classic arcade games online for free. Our collection features 6 timeless games that have entertained millions: Snake, Tetris, Pac-Man, Wordle, Tic-Tac-Toe, and Flappy Bird.
+            </p>
+            <p className="mb-4">
+              Each game is carefully optimized for modern browsers with smooth gameplay, responsive controls, and mobile-friendly interfaces. Whether you're looking to kill time, challenge your reflexes, or relive nostalgic gaming moments, we've got you covered.
+            </p>
+            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why Play Games on Multi Game Verse?</h3>
+            <ul className="space-y-2 mb-4">
+              <li>✓ <strong>No Downloads Required:</strong> Play instantly in your web browser</li>
+              <li>✓ <strong>100% Free:</strong> All games completely free with no hidden costs</li>
+              <li>✓ <strong>Unblocked Games:</strong> Access from school, work, or anywhere</li>
+              <li>✓ <strong>Mobile Friendly:</strong> Play on phone, tablet, or desktop</li>
+              <li>✓ <strong>Privacy First:</strong> No registration, no personal data collection</li>
+              <li>✓ <strong>Save Your Progress:</strong> High scores saved locally on your device</li>
+            </ul>
+            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Our Game Collection</h3>
+            <p className="mb-4">
+              From the strategic puzzle-solving of Tetris to the fast-paced action of Flappy Bird, our games offer something for everyone. Challenge the AI in Tic-Tac-Toe, test your vocabulary with unlimited Wordle puzzles, navigate mazes in Pac-Man, or grow your snake to record lengths. Each game features progressive difficulty levels to keep you engaged and challenged.
+            </p>
+          </div>
+        </article>
       </section>
 
       {/* Footer */}

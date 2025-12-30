@@ -1,0 +1,13 @@
+# Multi Game Verse - Robots.txt
+User-agent: *
+Allow: /
+Allow: /snake
+Allow: /tic-tac-toe
+Allow: /wordle
+Allow: /tetris
+Allow: /pacman
+Allow: /flappy-bird
+Allow: /about
+Allow: /privacy
+
+Sitemap: https://multigameverse.com/sitemap.xml
