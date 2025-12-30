@@ -8,11 +8,11 @@ const GameCard = ({ title, description, icon: Icon, path, color }) => {
   };
 
   return (
-    <Link to={path}>
-      <div className="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-indigo-200 hover:-translate-y-1">
+    <Link to={path} aria-label={`Play ${title} - ${description}`}>
+      <article className="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-indigo-200 hover:-translate-y-1">
         <div className="flex items-start justify-between mb-4">
-          <div className={`p-3 rounded-xl ${color} bg-opacity-10 group-hover:scale-110 transition-transform`}>
-            <Icon className={`w-8 h-8 ${color}`} />
+          <div className={`p-3 rounded-xl ${color} bg-opacity-10 group-hover:scale-110 transition-transform`} role="img" aria-label={`${title} icon`}>
+            <Icon className={`w-8 h-8 ${color}`} aria-hidden="true" />
           </div>
         </div>
         
@@ -21,14 +21,14 @@ const GameCard = ({ title, description, icon: Icon, path, color }) => {
         
         <div className="flex items-center justify-between pt-4 border-t border-gray-100">
           <div className="flex items-center space-x-1 text-sm text-gray-500">
-            <Trophy className="w-4 h-4" />
+            <Trophy className="w-4 h-4" aria-hidden="true" />
             <span>Best: {getHighScore()}</span>
           </div>
-          <span className="text-indigo-600 font-medium text-sm group-hover:translate-x-1 transition-transform">
+          <span className="text-indigo-600 font-medium text-sm group-hover:translate-x-1 transition-transform" aria-hidden="true">
             Play →
           </span>
         </div>
-      </div>
+      </article>
     </Link>
   );
 };
