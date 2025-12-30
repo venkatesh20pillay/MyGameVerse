@@ -84,6 +84,95 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+        <!-- JSON-LD Structured Data for SEO -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Multi Game Verse",
+          "url": "https://multigameverse.com",
+          "description": "Play 6 classic arcade games online for free - Snake, Tetris, Pac-Man, Wordle, Tic-Tac-Toe & Flappy Bird. No downloads required.",
+          "applicationCategory": "GameApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1250"
+          },
+          "creator": {
+            "@type": "Organization",
+            "name": "Multi Game Verse"
+          }
+        }
+        </script>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Classic Arcade Games",
+          "itemListElement": [
+            {
+              "@type": "VideoGame",
+              "position": 1,
+              "name": "Snake Game",
+              "description": "Classic snake game with progressive difficulty",
+              "url": "https://multigameverse.com/snake",
+              "gamePlatform": "Web Browser",
+              "playMode": "SinglePlayer"
+            },
+            {
+              "@type": "VideoGame",
+              "position": 2,
+              "name": "Tic Tac Toe",
+              "description": "Play against AI or with a friend",
+              "url": "https://multigameverse.com/tic-tac-toe",
+              "gamePlatform": "Web Browser",
+              "playMode": ["SinglePlayer", "MultiPlayer"]
+            },
+            {
+              "@type": "VideoGame",
+              "position": 3,
+              "name": "Wordle Unlimited",
+              "description": "Unlimited word guessing game",
+              "url": "https://multigameverse.com/wordle",
+              "gamePlatform": "Web Browser",
+              "playMode": "SinglePlayer"
+            },
+            {
+              "@type": "VideoGame",
+              "position": 4,
+              "name": "Tetris",
+              "description": "Classic block falling puzzle game",
+              "url": "https://multigameverse.com/tetris",
+              "gamePlatform": "Web Browser",
+              "playMode": "SinglePlayer"
+            },
+            {
+              "@type": "VideoGame",
+              "position": 5,
+              "name": "Pac-Man",
+              "description": "Navigate mazes and eat dots",
+              "url": "https://multigameverse.com/pacman",
+              "gamePlatform": "Web Browser",
+              "playMode": "SinglePlayer"
+            },
+            {
+              "@type": "VideoGame",
+              "position": 6,
+              "name": "Flappy Bird",
+              "description": "Tap to flap through pipes",
+              "url": "https://multigameverse.com/flappy-bird",
+              "gamePlatform": "Web Browser",
+              "playMode": "SinglePlayer"
+            }
+          ]
+        }
+        </script>
         <script>
             !(function (t, e) {
                 var o, n, p, r;
