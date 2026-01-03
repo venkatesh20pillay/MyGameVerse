@@ -9,6 +9,7 @@ import PacManGame from './pages/games/PacManGame';
 import FlappyBirdGame from './pages/games/FlappyBirdGame';
 import AboutPage from './pages/AboutPage';
 import PrivacyPage from './pages/PrivacyPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
           <Route path="/flappy-bird" element={<FlappyBirdGame />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
+          {/* 404 Catch-all route - must be last */}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </div>
