@@ -94,6 +94,12 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
         <!-- JSON-LD Structured Data for SEO -->
+        <script>
+        // URL Canonicalization: Redirect www to non-www
+        if (window.location.hostname.startsWith('www.')) {
+          window.location.replace(window.location.href.replace('www.', ''));
+        }
+        </script>
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
