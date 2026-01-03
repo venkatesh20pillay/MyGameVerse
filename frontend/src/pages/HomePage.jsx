@@ -78,7 +78,7 @@ const HomePage = () => {
         </div>
 
         {/* Ad Space Placeholder */}
-        <div className="mb-12 bg-gradient-to-r from-gray-100 to-gray-200 rounded-xl p-8 border border-gray-300 border-dashed min-h-[120px]">
+        <div className="mb-12 bg-gray-800/30 rounded-xl p-8 border border-gray-700 border-dashed min-h-[120px]">
         </div>
 
         {/* Games Grid */}
@@ -90,106 +90,106 @@ const HomePage = () => {
 
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-          <article className="text-center p-6">
-            <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Sparkles className="w-6 h-6 text-indigo-600" />
+          <article className="text-center p-6 bg-gray-800/30 rounded-2xl border border-gray-700">
+            <div className="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <Sparkles className="w-6 h-6 text-cyan-400" />
             </div>
-            <h2 className="text-lg font-semibold text-gray-900 mb-2">Instant Play</h2>
-            <p className="text-gray-600 text-sm">No installation required. Start playing immediately in your browser on any device.</p>
+            <h2 className="text-lg font-semibold text-white mb-2">Instant Play</h2>
+            <p className="text-gray-400 text-sm">No installation required. Start playing immediately in your browser on any device.</p>
           </article>
-          <article className="text-center p-6">
-            <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Target className="w-6 h-6 text-purple-600" />
+          <article className="text-center p-6 bg-gray-800/30 rounded-2xl border border-gray-700">
+            <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <Target className="w-6 h-6 text-purple-400" />
             </div>
-            <h2 className="text-lg font-semibold text-gray-900 mb-2">Save Progress</h2>
-            <p className="text-gray-600 text-sm">Your scores and achievements are saved locally on your device for continuous gameplay.</p>
+            <h2 className="text-lg font-semibold text-white mb-2">Save Progress</h2>
+            <p className="text-gray-400 text-sm">Your scores and achievements are saved locally on your device for continuous gameplay.</p>
           </article>
-          <article className="text-center p-6">
-            <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-              <Zap className="w-6 h-6 text-green-600" />
+          <article className="text-center p-6 bg-gray-800/30 rounded-2xl border border-gray-700">
+            <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <Zap className="w-6 h-6 text-green-400" />
             </div>
-            <h2 className="text-lg font-semibold text-gray-900 mb-2">Mobile Optimized</h2>
-            <p className="text-gray-600 text-sm">Fully responsive design with touch controls optimized for mobile and tablet gaming.</p>
+            <h2 className="text-lg font-semibold text-white mb-2">Mobile Optimized</h2>
+            <p className="text-gray-400 text-sm">Fully responsive design with touch controls optimized for mobile and tablet gaming.</p>
           </article>
         </div>
 
         {/* SEO Content Section */}
-        <article className="mt-20 bg-white rounded-2xl shadow-lg p-8 md:p-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Play Classic Arcade Games Online - Free & Unblocked</h2>
-          <div className="prose prose-lg max-w-none text-gray-600">
+        <article className="mt-20 bg-gray-800/50 rounded-2xl shadow-lg p-8 md:p-12 border border-gray-700">
+          <h2 className="text-3xl font-bold text-white mb-6">Play Classic Arcade Games Online - Free & Unblocked</h2>
+          <div className="prose prose-lg max-w-none text-gray-300">
             <p className="mb-4">
-              Welcome to Multi Game Verse, your premier destination for playing classic arcade games online for free. Our collection features 6 timeless games that have entertained millions: <a href="/snake" className="text-indigo-600 hover:text-indigo-700 font-medium">Snake</a>, <a href="/tetris" className="text-indigo-600 hover:text-indigo-700 font-medium">Tetris</a>, <a href="/pacman" className="text-indigo-600 hover:text-indigo-700 font-medium">Pac-Man</a>, <a href="/wordle" className="text-indigo-600 hover:text-indigo-700 font-medium">Wordle</a>, <a href="/tic-tac-toe" className="text-indigo-600 hover:text-indigo-700 font-medium">Tic-Tac-Toe</a>, and <a href="/flappy-bird" className="text-indigo-600 hover:text-indigo-700 font-medium">Flappy Bird</a>.
+              Welcome to Multi Game Verse, your premier destination for playing classic arcade games online for free. Our collection features 6 timeless games that have entertained millions: <a href="/snake" className="text-cyan-400 hover:text-cyan-300 font-medium">Snake</a>, <a href="/tetris" className="text-cyan-400 hover:text-cyan-300 font-medium">Tetris</a>, <a href="/pacman" className="text-cyan-400 hover:text-cyan-300 font-medium">Pac-Man</a>, <a href="/wordle" className="text-cyan-400 hover:text-cyan-300 font-medium">Wordle</a>, <a href="/tic-tac-toe" className="text-cyan-400 hover:text-cyan-300 font-medium">Tic-Tac-Toe</a>, and <a href="/flappy-bird" className="text-cyan-400 hover:text-cyan-300 font-medium">Flappy Bird</a>.
             </p>
             <p className="mb-4">
-              Each game is carefully optimized for modern browsers with smooth gameplay, responsive controls, and mobile-friendly interfaces. Whether you're looking to kill time, challenge your reflexes, or relive nostalgic gaming moments, we've got you covered. Check out our <a href="/about" className="text-indigo-600 hover:text-indigo-700 font-medium">about page</a> to learn more about our mission.
+              Each game is carefully optimized for modern browsers with smooth gameplay, responsive controls, and mobile-friendly interfaces. Whether you're looking to kill time, challenge your reflexes, or relive nostalgic gaming moments, we've got you covered. Check out our <a href="/about" className="text-cyan-400 hover:text-cyan-300 font-medium">about page</a> to learn more about our mission.
             </p>
-            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why Play Games on Multi Game Verse?</h3>
-            <ul className="space-y-2 mb-4">
-              <li>✓ <strong>No Downloads Required:</strong> Play instantly in your web browser</li>
-              <li>✓ <strong>100% Free:</strong> All games completely free with no hidden costs</li>
-              <li>✓ <strong>Unblocked Games:</strong> Access from school, work, or anywhere</li>
-              <li>✓ <strong>Mobile Friendly:</strong> Play on phone, tablet, or desktop</li>
-              <li>✓ <strong>Privacy First:</strong> No registration, no personal data collection - read our <a href="/privacy" className="text-indigo-600 hover:text-indigo-700 font-medium">privacy policy</a></li>
-              <li>✓ <strong>Save Your Progress:</strong> High scores saved locally on your device</li>
+            <h3 className="text-2xl font-bold text-white mt-8 mb-4">Why Play Games on Multi Game Verse?</h3>
+            <ul className="space-y-2 mb-4 text-gray-300">
+              <li>✓ <strong className="text-white">No Downloads Required:</strong> Play instantly in your web browser</li>
+              <li>✓ <strong className="text-white">100% Free:</strong> All games completely free with no hidden costs</li>
+              <li>✓ <strong className="text-white">Unblocked Games:</strong> Access from school, work, or anywhere</li>
+              <li>✓ <strong className="text-white">Mobile Friendly:</strong> Play on phone, tablet, or desktop</li>
+              <li>✓ <strong className="text-white">Privacy First:</strong> No registration, no personal data collection - read our <a href="/privacy" className="text-cyan-400 hover:text-cyan-300 font-medium">privacy policy</a></li>
+              <li>✓ <strong className="text-white">Save Your Progress:</strong> High scores saved locally on your device</li>
             </ul>
-            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Our Game Collection</h3>
+            <h3 className="text-2xl font-bold text-white mt-8 mb-4">Our Game Collection</h3>
             <p className="mb-4">
-              From the strategic puzzle-solving of <a href="/tetris" className="text-indigo-600 hover:text-indigo-700 font-medium">Tetris</a> to the fast-paced action of <a href="/flappy-bird" className="text-indigo-600 hover:text-indigo-700 font-medium">Flappy Bird</a>, our games offer something for everyone. Challenge the AI in <a href="/tic-tac-toe" className="text-indigo-600 hover:text-indigo-700 font-medium">Tic-Tac-Toe</a>, test your vocabulary with unlimited <a href="/wordle" className="text-indigo-600 hover:text-indigo-700 font-medium">Wordle</a> puzzles, navigate mazes in <a href="/pacman" className="text-indigo-600 hover:text-indigo-700 font-medium">Pac-Man</a>, or grow your snake to record lengths in our <a href="/snake" className="text-indigo-600 hover:text-indigo-700 font-medium">Snake Game</a>. Each game features progressive difficulty levels to keep you engaged and challenged.
+              From the strategic puzzle-solving of <a href="/tetris" className="text-cyan-400 hover:text-cyan-300 font-medium">Tetris</a> to the fast-paced action of <a href="/flappy-bird" className="text-cyan-400 hover:text-cyan-300 font-medium">Flappy Bird</a>, our games offer something for everyone. Challenge the AI in <a href="/tic-tac-toe" className="text-cyan-400 hover:text-cyan-300 font-medium">Tic-Tac-Toe</a>, test your vocabulary with unlimited <a href="/wordle" className="text-cyan-400 hover:text-cyan-300 font-medium">Wordle</a> puzzles, navigate mazes in <a href="/pacman" className="text-cyan-400 hover:text-cyan-300 font-medium">Pac-Man</a>, or grow your snake to record lengths in our <a href="/snake" className="text-cyan-400 hover:text-cyan-300 font-medium">Snake Game</a>. Each game features progressive difficulty levels to keep you engaged and challenged.
             </p>
           </div>
         </article>
       </section>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 mt-20">
+      <footer className="bg-gray-900 border-t border-gray-800 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             {/* About Column */}
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Multi Game Verse</h3>
-              <p className="text-gray-600 text-sm mb-4">
+              <h3 className="text-lg font-bold text-white mb-4">Multi Game Verse</h3>
+              <p className="text-gray-400 text-sm mb-4">
                 Play classic arcade games online for free. No downloads, no registration required.
               </p>
             </div>
             
             {/* Games Column */}
             <div>
-              <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Games</h3>
+              <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Games</h3>
               <ul className="space-y-2">
-                <li><a href="/snake" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Snake Game</a></li>
-                <li><a href="/tic-tac-toe" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Tic Tac Toe</a></li>
-                <li><a href="/wordle" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Wordle Unlimited</a></li>
-                <li><a href="/tetris" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Tetris</a></li>
-                <li><a href="/pacman" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Pac-Man</a></li>
-                <li><a href="/flappy-bird" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Flappy Bird</a></li>
+                <li><a href="/snake" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Snake Game</a></li>
+                <li><a href="/tic-tac-toe" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Tic Tac Toe</a></li>
+                <li><a href="/wordle" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Wordle Unlimited</a></li>
+                <li><a href="/tetris" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Tetris</a></li>
+                <li><a href="/pacman" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Pac-Man</a></li>
+                <li><a href="/flappy-bird" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Flappy Bird</a></li>
               </ul>
             </div>
             
             {/* Quick Links Column */}
             <div>
-              <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Quick Links</h3>
+              <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li><a href="/" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Home</a></li>
-                <li><a href="/about" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">About Us</a></li>
-                <li><a href="/privacy" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Privacy Policy</a></li>
+                <li><a href="/" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Home</a></li>
+                <li><a href="/about" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">About Us</a></li>
+                <li><a href="/privacy" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Privacy Policy</a></li>
               </ul>
             </div>
             
             {/* Contact Column */}
             <div>
-              <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Contact</h3>
+              <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Contact</h3>
               <ul className="space-y-2">
-                <li><a href="mailto:saverapps20@gmail.com" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Email Us</a></li>
+                <li><a href="mailto:saverapps20@gmail.com" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Email Us</a></li>
               </ul>
             </div>
           </div>
           
-          <div className="border-t border-gray-200 pt-8">
+          <div className="border-t border-gray-800 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <p className="text-gray-600 text-sm">© 2025 Multi Game Verse. All rights reserved.</p>
+              <p className="text-gray-500 text-sm">© 2025 Multi Game Verse. All rights reserved.</p>
               <div className="flex space-x-6">
-                <a href="/about" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">About Us</a>
-                <a href="/privacy" className="text-gray-600 hover:text-indigo-600 text-sm transition-colors">Privacy Policy</a>
+                <a href="/about" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">About Us</a>
+                <a href="/privacy" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">Privacy Policy</a>
               </div>
             </div>
           </div>
