@@ -118,10 +118,10 @@ const HomePage = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Play Classic Arcade Games Online - Free & Unblocked</h2>
           <div className="prose prose-lg max-w-none text-gray-600">
             <p className="mb-4">
-              Welcome to Multi Game Verse, your premier destination for playing classic arcade games online for free. Our collection features 6 timeless games that have entertained millions: Snake, Tetris, Pac-Man, Wordle, Tic-Tac-Toe, and Flappy Bird.
+              Welcome to Multi Game Verse, your premier destination for playing classic arcade games online for free. Our collection features 6 timeless games that have entertained millions: <a href="/snake" className="text-indigo-600 hover:text-indigo-700 font-medium">Snake</a>, <a href="/tetris" className="text-indigo-600 hover:text-indigo-700 font-medium">Tetris</a>, <a href="/pacman" className="text-indigo-600 hover:text-indigo-700 font-medium">Pac-Man</a>, <a href="/wordle" className="text-indigo-600 hover:text-indigo-700 font-medium">Wordle</a>, <a href="/tic-tac-toe" className="text-indigo-600 hover:text-indigo-700 font-medium">Tic-Tac-Toe</a>, and <a href="/flappy-bird" className="text-indigo-600 hover:text-indigo-700 font-medium">Flappy Bird</a>.
             </p>
             <p className="mb-4">
-              Each game is carefully optimized for modern browsers with smooth gameplay, responsive controls, and mobile-friendly interfaces. Whether you're looking to kill time, challenge your reflexes, or relive nostalgic gaming moments, we've got you covered.
+              Each game is carefully optimized for modern browsers with smooth gameplay, responsive controls, and mobile-friendly interfaces. Whether you're looking to kill time, challenge your reflexes, or relive nostalgic gaming moments, we've got you covered. Check out our <a href="/about" className="text-indigo-600 hover:text-indigo-700 font-medium">about page</a> to learn more about our mission.
             </p>
             <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why Play Games on Multi Game Verse?</h3>
             <ul className="space-y-2 mb-4">
@@ -129,12 +129,12 @@ const HomePage = () => {
               <li>✓ <strong>100% Free:</strong> All games completely free with no hidden costs</li>
               <li>✓ <strong>Unblocked Games:</strong> Access from school, work, or anywhere</li>
               <li>✓ <strong>Mobile Friendly:</strong> Play on phone, tablet, or desktop</li>
-              <li>✓ <strong>Privacy First:</strong> No registration, no personal data collection</li>
+              <li>✓ <strong>Privacy First:</strong> No registration, no personal data collection - read our <a href="/privacy" className="text-indigo-600 hover:text-indigo-700 font-medium">privacy policy</a></li>
               <li>✓ <strong>Save Your Progress:</strong> High scores saved locally on your device</li>
             </ul>
             <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Our Game Collection</h3>
             <p className="mb-4">
-              From the strategic puzzle-solving of Tetris to the fast-paced action of Flappy Bird, our games offer something for everyone. Challenge the AI in Tic-Tac-Toe, test your vocabulary with unlimited Wordle puzzles, navigate mazes in Pac-Man, or grow your snake to record lengths. Each game features progressive difficulty levels to keep you engaged and challenged.
+              From the strategic puzzle-solving of <a href="/tetris" className="text-indigo-600 hover:text-indigo-700 font-medium">Tetris</a> to the fast-paced action of <a href="/flappy-bird" className="text-indigo-600 hover:text-indigo-700 font-medium">Flappy Bird</a>, our games offer something for everyone. Challenge the AI in <a href="/tic-tac-toe" className="text-indigo-600 hover:text-indigo-700 font-medium">Tic-Tac-Toe</a>, test your vocabulary with unlimited <a href="/wordle" className="text-indigo-600 hover:text-indigo-700 font-medium">Wordle</a> puzzles, navigate mazes in <a href="/pacman" className="text-indigo-600 hover:text-indigo-700 font-medium">Pac-Man</a>, or grow your snake to record lengths in our <a href="/snake" className="text-indigo-600 hover:text-indigo-700 font-medium">Snake Game</a>. Each game features progressive difficulty levels to keep you engaged and challenged.
             </p>
           </div>
         </article>
