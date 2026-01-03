@@ -172,19 +172,19 @@ const WordleGame = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-amber-100 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-8 px-4">
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-gray-700 hover:text-yellow-600 transition-colors"
+            className="flex items-center space-x-2 text-gray-300 hover:text-yellow-400 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span className="font-medium">Back to Games</span>
           </button>
           <button
             onClick={() => setShowRules(!showRules)}
-            className="flex items-center space-x-2 text-gray-700 hover:text-yellow-600 transition-colors"
+            className="flex items-center space-x-2 text-gray-300 hover:text-yellow-400 transition-colors"
           >
             <Info className="w-5 h-5" />
             <span className="font-medium">Rules</span>
@@ -192,66 +192,66 @@ const WordleGame = () => {
         </div>
 
         {showRules && (
-          <div className="bg-white rounded-xl p-6 mb-6 shadow-lg border border-yellow-200">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">How to Play Wordle</h3>
-            <ul className="space-y-2 text-gray-600 mb-4">
+          <div className="bg-gray-800/50 rounded-xl p-6 mb-6 shadow-lg border border-gray-700">
+            <h3 className="text-xl font-bold text-white mb-4">How to Play Wordle</h3>
+            <ul className="space-y-2 text-gray-300 mb-4">
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-yellow-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mt-2 mr-3"></span>
                 <span>Guess the 5-letter word in 6 tries</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-yellow-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mt-2 mr-3"></span>
                 <span>Each guess must be a valid 5-letter word</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-yellow-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mt-2 mr-3"></span>
                 <span>After each guess, the color of tiles will change to show how close you are</span>
               </li>
             </ul>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <div className="w-12 h-12 bg-green-500 text-white flex items-center justify-center font-bold rounded">W</div>
-                <span className="text-sm text-gray-600">Letter is in the word and in correct position</span>
+                <span className="text-sm text-gray-300">Letter is in the word and in correct position</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-12 h-12 bg-yellow-500 text-white flex items-center justify-center font-bold rounded">O</div>
-                <span className="text-sm text-gray-600">Letter is in the word but in wrong position</span>
+                <span className="text-sm text-gray-300">Letter is in the word but in wrong position</span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-12 h-12 bg-gray-400 text-white flex items-center justify-center font-bold rounded">R</div>
-                <span className="text-sm text-gray-600">Letter is not in the word</span>
+                <div className="w-12 h-12 bg-gray-500 text-white flex items-center justify-center font-bold rounded">R</div>
+                <span className="text-sm text-gray-300">Letter is not in the word</span>
               </div>
             </div>
           </div>
         )}
 
-        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+        <div className="bg-gray-800/50 rounded-2xl shadow-xl p-6 md:p-8 border border-gray-700">
           <div className="text-center mb-6">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Wordle Unlimited</h1>
+            <h1 className="text-3xl font-bold text-white mb-2">Wordle Unlimited</h1>
           </div>
 
           {/* Stats */}
           <div className="flex justify-center space-x-6 mb-6">
             <div className="text-center">
-              <p className="text-2xl font-bold text-yellow-600">{stats.played}</p>
-              <p className="text-gray-600 text-sm">Played</p>
+              <p className="text-2xl font-bold text-yellow-400">{stats.played}</p>
+              <p className="text-gray-400 text-sm">Played</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-bold text-green-600">{stats.won}</p>
-              <p className="text-gray-600 text-sm">Won</p>
+              <p className="text-2xl font-bold text-green-400">{stats.won}</p>
+              <p className="text-gray-400 text-sm">Won</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-bold text-orange-600">{stats.streak}</p>
-              <p className="text-gray-600 text-sm">Streak</p>
+              <p className="text-2xl font-bold text-orange-400">{stats.streak}</p>
+              <p className="text-gray-400 text-sm">Streak</p>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center space-x-1">
-                <Trophy className="w-5 h-5 text-yellow-600" />
-                <p className="text-2xl font-bold text-yellow-600">
+                <Trophy className="w-5 h-5 text-yellow-500" />
+                <p className="text-2xl font-bold text-yellow-500">
                   {stats.played > 0 ? Math.round((stats.won / stats.played) * 100) : 0}%
                 </p>
               </div>
-              <p className="text-gray-600 text-sm">Win Rate</p>
+              <p className="text-gray-400 text-sm">Win Rate</p>
             </div>
           </div>
 
@@ -270,8 +270,8 @@ const WordleGame = () => {
                       const cellClass = guess 
                         ? getCellColor(letter, colIndex, guess)
                         : isCurrentRow && letter !== ' '
-                        ? 'bg-white border-gray-400 animate-pop'
-                        : 'bg-white border-gray-300';
+                        ? 'bg-gray-700 border-gray-500 animate-pop'
+                        : 'bg-gray-800 border-gray-600';
                       
                       return (
                         <div
@@ -295,13 +295,13 @@ const WordleGame = () => {
             <div className="text-center mb-6">
               {won ? (
                 <div className="space-y-2">
-                  <p className="text-2xl font-bold text-green-600">Congratulations! 🎉</p>
-                  <p className="text-gray-600">You guessed the word in {guesses.length} tries!</p>
+                  <p className="text-2xl font-bold text-green-400">Congratulations!</p>
+                  <p className="text-gray-300">You guessed the word in {guesses.length} tries!</p>
                 </div>
               ) : (
                 <div className="space-y-2">
-                  <p className="text-2xl font-bold text-red-600">Game Over!</p>
-                  <p className="text-gray-600">The word was: <span className="font-bold text-yellow-600">{targetWord}</span></p>
+                  <p className="text-2xl font-bold text-red-400">Game Over!</p>
+                  <p className="text-gray-300">The word was: <span className="font-bold text-yellow-400">{targetWord}</span></p>
                 </div>
               )}
               <button
@@ -335,7 +335,7 @@ const WordleGame = () => {
             ))}
           </div>
 
-          <p className="text-center text-gray-600 text-sm mt-4">
+          <p className="text-center text-gray-400 text-sm mt-4">
             Type or click letters to guess. Press Enter to submit.
           </p>
         </div>

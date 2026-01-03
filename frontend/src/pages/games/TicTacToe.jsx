@@ -168,19 +168,19 @@ const TicTacToe = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-8 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors"
+            className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span className="font-medium">Back to Games</span>
           </button>
           <button
             onClick={() => setShowRules(!showRules)}
-            className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors"
+            className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors"
           >
             <Info className="w-5 h-5" />
             <span className="font-medium">Rules</span>
@@ -188,45 +188,45 @@ const TicTacToe = () => {
         </div>
 
         {showRules && (
-          <div className="bg-white rounded-xl p-6 mb-6 shadow-lg border border-blue-200">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">How to Play Tic-Tac-Toe</h3>
-            <ul className="space-y-2 text-gray-600">
+          <div className="bg-gray-800/50 rounded-xl p-6 mb-6 shadow-lg border border-gray-700">
+            <h3 className="text-xl font-bold text-white mb-4">How to Play Tic-Tac-Toe</h3>
+            <ul className="space-y-2 text-gray-300">
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 mr-3"></span>
                 <span>Choose between playing against AI or with a friend (2 Player mode)</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 mr-3"></span>
                 <span>Players take turns placing X's and O's on a 3x3 grid</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 mr-3"></span>
                 <span>Get three in a row (horizontally, vertically, or diagonally) to win</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 mr-3"></span>
                 <span>In AI mode, you play as X and the AI plays as O</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 mr-3"></span>
                 <span>The AI uses optimal strategy and is very challenging!</span>
               </li>
             </ul>
           </div>
         )}
 
-        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+        <div className="bg-gray-800/50 rounded-2xl shadow-xl p-6 md:p-8 border border-gray-700">
           <div className="text-center mb-6">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Tic-Tac-Toe</h1>
+            <h1 className="text-3xl font-bold text-white mb-2">Tic-Tac-Toe</h1>
           </div>
 
           {!gameMode ? (
             <div className="flex flex-col items-center space-y-6 py-12">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Choose Game Mode</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">Choose Game Mode</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-lg">
                 <button
                   onClick={() => selectMode('ai')}
-                  className="flex flex-col items-center justify-center p-8 bg-gradient-to-br from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white rounded-xl transition-all transform hover:scale-105 shadow-lg"
+                  className="flex flex-col items-center justify-center p-8 bg-gradient-to-br from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30"
                 >
                   <Cpu className="w-12 h-12 mb-3" />
                   <span className="text-xl font-bold">vs AI</span>
@@ -234,7 +234,7 @@ const TicTacToe = () => {
                 </button>
                 <button
                   onClick={() => selectMode('2player')}
-                  className="flex flex-col items-center justify-center p-8 bg-gradient-to-br from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white rounded-xl transition-all transform hover:scale-105 shadow-lg"
+                  className="flex flex-col items-center justify-center p-8 bg-gradient-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-purple-500/30"
                 >
                   <Users className="w-12 h-12 mb-3" />
                   <span className="text-xl font-bold">2 Players</span>
@@ -246,17 +246,17 @@ const TicTacToe = () => {
             <>
               {/* Score Board */}
               <div className="flex justify-center space-x-6 mb-6">
-                <div className="text-center bg-blue-50 px-6 py-3 rounded-lg">
-                  <p className="text-gray-600 text-sm">X Wins</p>
-                  <p className="text-2xl font-bold text-blue-600">{scores.x}</p>
+                <div className="text-center bg-blue-500/20 px-6 py-3 rounded-lg border border-blue-500/30">
+                  <p className="text-gray-400 text-sm">X Wins</p>
+                  <p className="text-2xl font-bold text-blue-400">{scores.x}</p>
                 </div>
-                <div className="text-center bg-gray-50 px-6 py-3 rounded-lg">
-                  <p className="text-gray-600 text-sm">Draws</p>
-                  <p className="text-2xl font-bold text-gray-600">{scores.draws}</p>
+                <div className="text-center bg-gray-700/50 px-6 py-3 rounded-lg border border-gray-600">
+                  <p className="text-gray-400 text-sm">Draws</p>
+                  <p className="text-2xl font-bold text-gray-300">{scores.draws}</p>
                 </div>
-                <div className="text-center bg-red-50 px-6 py-3 rounded-lg">
-                  <p className="text-gray-600 text-sm">O Wins</p>
-                  <p className="text-2xl font-bold text-red-600">{scores.o}</p>
+                <div className="text-center bg-red-500/20 px-6 py-3 rounded-lg border border-red-500/30">
+                  <p className="text-gray-400 text-sm">O Wins</p>
+                  <p className="text-2xl font-bold text-red-400">{scores.o}</p>
                 </div>
               </div>
 
@@ -265,16 +265,16 @@ const TicTacToe = () => {
                 {winner ? (
                   <div className="text-2xl font-bold">
                     {winner === 'draw' ? (
-                      <span className="text-gray-600">It's a Draw!</span>
+                      <span className="text-gray-300">It's a Draw!</span>
                     ) : (
-                      <span className={winner === 'X' ? 'text-blue-600' : 'text-red-600'}>
+                      <span className={winner === 'X' ? 'text-blue-400' : 'text-red-400'}>
                         {winner} Wins!
                       </span>
                     )}
                   </div>
                 ) : (
-                  <div className="text-xl text-gray-700">
-                    Current Turn: <span className={`font-bold ${isXNext ? 'text-blue-600' : 'text-red-600'}`}>
+                  <div className="text-xl text-gray-300">
+                    Current Turn: <span className={`font-bold ${isXNext ? 'text-blue-400' : 'text-red-400'}`}>
                       {isXNext ? 'X' : 'O'}
                     </span>
                   </div>
@@ -283,18 +283,18 @@ const TicTacToe = () => {
 
               {/* Game Board */}
               <div className="flex justify-center mb-6">
-                <div className="grid grid-cols-3 gap-3 bg-gray-200 p-3 rounded-xl">
+                <div className="grid grid-cols-3 gap-3 bg-gray-700/50 p-3 rounded-xl">
                   {board.map((cell, index) => (
                     <button
                       key={index}
                       onClick={() => handleClick(index)}
                       disabled={cell !== null || winner !== null}
-                      className={`w-20 h-20 md:w-24 md:h-24 bg-white rounded-lg shadow-md hover:shadow-lg transition-all transform hover:scale-105 disabled:hover:scale-100 ${
-                        winningLine.includes(index) ? 'bg-yellow-100 ring-2 ring-yellow-400' : ''
+                      className={`w-20 h-20 md:w-24 md:h-24 bg-gray-800 rounded-lg shadow-md hover:bg-gray-700 transition-all transform hover:scale-105 disabled:hover:scale-100 border border-gray-600 ${
+                        winningLine.includes(index) ? 'bg-yellow-500/20 ring-2 ring-yellow-400' : ''
                       }`}
                     >
                       <span className={`text-4xl md:text-5xl font-bold ${
-                        cell === 'X' ? 'text-blue-600' : cell === 'O' ? 'text-red-600' : ''
+                        cell === 'X' ? 'text-blue-400' : cell === 'O' ? 'text-red-400' : ''
                       }`}>
                         {cell}
                       </span>
@@ -314,7 +314,7 @@ const TicTacToe = () => {
                 </button>
                 <button
                   onClick={() => setGameMode(null)}
-                  className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors"
+                  className="px-6 py-3 bg-gray-600 hover:bg-gray-500 text-white rounded-lg transition-colors"
                 >
                   Change Mode
                 </button>
@@ -326,7 +326,7 @@ const TicTacToe = () => {
                 </button>
               </div>
 
-              <p className="text-center text-gray-600 text-sm mt-4">
+              <p className="text-center text-gray-400 text-sm mt-4">
                 {gameMode === 'ai' ? 'Playing against AI' : 'Playing with friend'}
               </p>
             </>

@@ -159,20 +159,20 @@ const SnakeGame = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-8 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-gray-700 hover:text-green-600 transition-colors"
+            className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span className="font-medium">Back to Games</span>
           </button>
           <button
             onClick={() => setShowRules(!showRules)}
-            className="flex items-center space-x-2 text-gray-700 hover:text-green-600 transition-colors"
+            className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors"
           >
             <Info className="w-5 h-5" />
             <span className="font-medium">Rules</span>
@@ -181,54 +181,54 @@ const SnakeGame = () => {
 
         {/* Rules Panel */}
         {showRules && (
-          <div className="bg-white rounded-xl p-6 mb-6 shadow-lg border border-green-200">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">How to Play Snake</h3>
-            <ul className="space-y-2 text-gray-600">
+          <div className="bg-gray-800/50 rounded-xl p-6 mb-6 shadow-lg border border-gray-700">
+            <h3 className="text-xl font-bold text-white mb-4">How to Play Snake</h3>
+            <ul className="space-y-2 text-gray-300">
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 mr-3"></span>
                 <span>Use arrow keys or on-screen buttons to control the snake's direction</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 mr-3"></span>
                 <span>Eat the red food to grow longer and earn 10 points</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 mr-3"></span>
                 <span>Avoid hitting the walls or your own tail</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 mr-3"></span>
                 <span>Game speed increases every 50 points (progressive difficulty)</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 mr-3"></span>
                 <span>Press SPACE to pause/resume the game</span>
               </li>
             </ul>
           </div>
         )}
 
-        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+        <div className="bg-gray-800/50 rounded-2xl shadow-xl p-6 md:p-8 border border-gray-700">
           <div className="text-center mb-6">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Snake Game</h1>
+            <h1 className="text-3xl font-bold text-white mb-2">Snake Game</h1>
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-between mb-6 space-y-4 md:space-y-0">
             <div className="flex space-x-6">
               <div className="text-center">
-                <p className="text-gray-600 text-sm">Score</p>
-                <p className="text-2xl font-bold text-green-600">{score}</p>
+                <p className="text-gray-400 text-sm">Score</p>
+                <p className="text-2xl font-bold text-green-400">{score}</p>
               </div>
               <div className="text-center">
-                <p className="text-gray-600 text-sm">Level</p>
-                <p className="text-2xl font-bold text-emerald-600">{level}</p>
+                <p className="text-gray-400 text-sm">Level</p>
+                <p className="text-2xl font-bold text-emerald-400">{level}</p>
               </div>
               <div className="text-center">
                 <div className="flex items-center space-x-1">
-                  <Trophy className="w-4 h-4 text-yellow-600" />
-                  <p className="text-gray-600 text-sm">Best</p>
+                  <Trophy className="w-4 h-4 text-yellow-500" />
+                  <p className="text-gray-400 text-sm">Best</p>
                 </div>
-                <p className="text-2xl font-bold text-yellow-600">{highScore}</p>
+                <p className="text-2xl font-bold text-yellow-500">{highScore}</p>
               </div>
             </div>
           </div>
@@ -352,32 +352,32 @@ const SnakeGame = () => {
                 <div></div>
                 <button
                   onClick={() => handleDirectionClick({ x: 0, y: -1 })}
-                  className="p-4 bg-green-100 hover:bg-green-200 rounded-lg transition-colors"
+                  className="p-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
                 >
                   ↑
                 </button>
                 <div></div>
                 <button
                   onClick={() => handleDirectionClick({ x: -1, y: 0 })}
-                  className="p-4 bg-green-100 hover:bg-green-200 rounded-lg transition-colors"
+                  className="p-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
                 >
                   ←
                 </button>
                 <button
                   onClick={() => handleDirectionClick({ x: 0, y: 1 })}
-                  className="p-4 bg-green-100 hover:bg-green-200 rounded-lg transition-colors"
+                  className="p-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
                 >
                   ↓
                 </button>
                 <button
                   onClick={() => handleDirectionClick({ x: 1, y: 0 })}
-                  className="p-4 bg-green-100 hover:bg-green-200 rounded-lg transition-colors"
+                  className="p-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
                 >
                   →
                 </button>
               </div>
 
-              <p className="text-gray-600 text-sm text-center">
+              <p className="text-gray-400 text-sm text-center">
                 Use arrow keys or on-screen buttons to move | Press SPACE to pause
               </p>
             </div>

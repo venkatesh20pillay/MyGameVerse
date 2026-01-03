@@ -222,19 +222,19 @@ const TetrisGame = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-8 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 transition-colors"
+            className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span className="font-medium">Back to Games</span>
           </button>
           <button
             onClick={() => setShowRules(!showRules)}
-            className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 transition-colors"
+            className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors"
           >
             <Info className="w-5 h-5" />
             <span className="font-medium">Rules</span>
@@ -242,47 +242,47 @@ const TetrisGame = () => {
         </div>
 
         {showRules && (
-          <div className="bg-white rounded-xl p-6 mb-6 shadow-lg border border-purple-200">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">How to Play Tetris</h3>
-            <ul className="space-y-2 text-gray-600">
+          <div className="bg-gray-800/50 rounded-xl p-6 mb-6 shadow-lg border border-gray-700">
+            <h3 className="text-xl font-bold text-white mb-4">How to Play Tetris</h3>
+            <ul className="space-y-2 text-gray-300">
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 mr-3"></span>
                 <span>Use arrow keys: Left/Right to move, Up to rotate, Down to soft drop</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 mr-3"></span>
                 <span>Press SPACE for hard drop (instantly drop piece)</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 mr-3"></span>
                 <span>Complete horizontal lines to clear them and earn points</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 mr-3"></span>
                 <span>Clear multiple lines at once for bonus points</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 mr-3"></span>
                 <span>Game speed increases every 10 lines (progressive difficulty)</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 mr-3"></span>
                 <span>Game ends when pieces reach the top</span>
               </li>
             </ul>
           </div>
         )}
 
-        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+        <div className="bg-gray-800/50 rounded-2xl shadow-xl p-6 md:p-8 border border-gray-700">
           <div className="text-center mb-6">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Tetris</h1>
+            <h1 className="text-3xl font-bold text-white mb-2">Tetris</h1>
           </div>
 
           <div className="flex flex-col md:flex-row justify-center items-start gap-6">
             {/* Game Board */}
             <div className="flex flex-col items-center">
               <div 
-                className="relative bg-gray-900 rounded-lg p-1 shadow-2xl"
+                className="relative bg-gray-950 rounded-lg p-1 shadow-2xl border border-gray-700"
                 style={{ width: COLS * 30 + 8, height: ROWS * 30 + 8 }}
               >
                 <div className="grid gap-[1px]" style={{ gridTemplateRows: `repeat(${ROWS}, 30px)` }}>
@@ -291,7 +291,7 @@ const TetrisGame = () => {
                       {row.map((cell, x) => (
                         <div
                           key={x}
-                          className={`w-[30px] h-[30px] ${cell || 'bg-gray-800'} border border-gray-700 rounded-sm`}
+                          className={`w-[30px] h-[30px] ${cell || 'bg-gray-900'} border border-gray-800 rounded-sm`}
                         />
                       ))}
                     </div>
@@ -320,12 +320,12 @@ const TetrisGame = () => {
 
               {/* Mobile Controls */}
               <div className="grid grid-cols-3 gap-2 mt-4 md:hidden">
-                <button onClick={() => move(-1)} className="p-4 bg-purple-100 hover:bg-purple-200 rounded-lg">←</button>
-                <button onClick={rotate} className="p-4 bg-purple-100 hover:bg-purple-200 rounded-lg">↻</button>
-                <button onClick={() => move(1)} className="p-4 bg-purple-100 hover:bg-purple-200 rounded-lg">→</button>
-                <button onClick={moveDown} className="p-4 bg-purple-100 hover:bg-purple-200 rounded-lg">↓</button>
-                <button onClick={drop} className="p-4 bg-purple-100 hover:bg-purple-200 rounded-lg">Drop</button>
-                <button onClick={() => setIsPaused(!isPaused)} className="p-4 bg-purple-100 hover:bg-purple-200 rounded-lg">
+                <button onClick={() => move(-1)} className="p-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg">←</button>
+                <button onClick={rotate} className="p-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg">↻</button>
+                <button onClick={() => move(1)} className="p-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg">→</button>
+                <button onClick={moveDown} className="p-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg">↓</button>
+                <button onClick={drop} className="p-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg">Drop</button>
+                <button onClick={() => setIsPaused(!isPaused)} className="p-4 bg-gray-700 hover:bg-gray-600 text-white rounded-lg">
                   {isPaused ? 'Play' : 'Pause'}
                 </button>
               </div>
@@ -333,38 +333,38 @@ const TetrisGame = () => {
 
             {/* Stats Panel */}
             <div className="space-y-4 w-full md:w-auto">
-              <div className="bg-purple-50 rounded-xl p-4">
-                <p className="text-gray-600 text-sm mb-1">Score</p>
-                <p className="text-3xl font-bold text-purple-600">{score}</p>
+              <div className="bg-purple-500/20 rounded-xl p-4 border border-purple-500/30">
+                <p className="text-gray-400 text-sm mb-1">Score</p>
+                <p className="text-3xl font-bold text-purple-400">{score}</p>
               </div>
-              <div className="bg-pink-50 rounded-xl p-4">
-                <p className="text-gray-600 text-sm mb-1">Level</p>
-                <p className="text-3xl font-bold text-pink-600">{level}</p>
+              <div className="bg-pink-500/20 rounded-xl p-4 border border-pink-500/30">
+                <p className="text-gray-400 text-sm mb-1">Level</p>
+                <p className="text-3xl font-bold text-pink-400">{level}</p>
               </div>
-              <div className="bg-indigo-50 rounded-xl p-4">
-                <p className="text-gray-600 text-sm mb-1">Lines</p>
-                <p className="text-3xl font-bold text-indigo-600">{lines}</p>
+              <div className="bg-cyan-500/20 rounded-xl p-4 border border-cyan-500/30">
+                <p className="text-gray-400 text-sm mb-1">Lines</p>
+                <p className="text-3xl font-bold text-cyan-400">{lines}</p>
               </div>
-              <div className="bg-yellow-50 rounded-xl p-4">
+              <div className="bg-yellow-500/20 rounded-xl p-4 border border-yellow-500/30">
                 <div className="flex items-center space-x-1 mb-1">
-                  <Trophy className="w-4 h-4 text-yellow-600" />
-                  <p className="text-gray-600 text-sm">Best</p>
+                  <Trophy className="w-4 h-4 text-yellow-500" />
+                  <p className="text-gray-400 text-sm">Best</p>
                 </div>
-                <p className="text-3xl font-bold text-yellow-600">{highScore}</p>
+                <p className="text-3xl font-bold text-yellow-500">{highScore}</p>
               </div>
 
               <div className="flex flex-col space-y-2">
                 <button
                   onClick={() => setIsPaused(!isPaused)}
                   disabled={gameOver}
-                  className="flex items-center justify-center space-x-2 px-4 py-3 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white rounded-lg transition-colors"
+                  className="flex items-center justify-center space-x-2 px-4 py-3 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-600 text-white rounded-lg transition-colors"
                 >
                   {isPaused ? <Play className="w-5 h-5" /> : <Pause className="w-5 h-5" />}
                   <span>{isPaused ? 'Start' : 'Pause'}</span>
                 </button>
                 <button
                   onClick={resetGame}
-                  className="flex items-center justify-center space-x-2 px-4 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors"
+                  className="flex items-center justify-center space-x-2 px-4 py-3 bg-gray-600 hover:bg-gray-500 text-white rounded-lg transition-colors"
                 >
                   <RotateCcw className="w-5 h-5" />
                   <span>Reset</span>
@@ -373,7 +373,7 @@ const TetrisGame = () => {
             </div>
           </div>
 
-          <p className="text-center text-gray-600 text-sm mt-6">
+          <p className="text-center text-gray-400 text-sm mt-6">
             ←/→ Move | ↑ Rotate | ↓ Soft Drop | SPACE Hard Drop | P Pause
           </p>
         </div>
