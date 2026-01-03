@@ -152,19 +152,19 @@ const FlappyBirdGame = () => {
   }, [started, gameOver]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-blue-100 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-8 px-4">
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-gray-700 hover:text-cyan-600 transition-colors"
+            className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span className="font-medium">Back to Games</span>
           </button>
           <button
             onClick={() => setShowRules(!showRules)}
-            className="flex items-center space-x-2 text-gray-700 hover:text-cyan-600 transition-colors"
+            className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
           >
             <Info className="w-5 h-5" />
             <span className="font-medium">Rules</span>
@@ -172,49 +172,49 @@ const FlappyBirdGame = () => {
         </div>
 
         {showRules && (
-          <div className="bg-white rounded-xl p-6 mb-6 shadow-lg border border-cyan-200">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">How to Play Flappy Bird</h3>
-            <ul className="space-y-2 text-gray-600">
+          <div className="bg-gray-800/50 rounded-xl p-6 mb-6 shadow-lg border border-gray-700">
+            <h3 className="text-xl font-bold text-white mb-4">How to Play Flappy Bird</h3>
+            <ul className="space-y-2 text-gray-300">
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-cyan-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-3"></span>
                 <span>Click, tap, or press SPACE/UP arrow to make the bird flap</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-cyan-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-3"></span>
                 <span>Navigate through gaps between pipes</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-cyan-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-3"></span>
                 <span>Each pipe passed = 1 point</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-cyan-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-3"></span>
                 <span>Avoid hitting pipes, ground, or ceiling</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-cyan-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-3"></span>
                 <span>Simple controls, challenging gameplay!</span>
               </li>
             </ul>
           </div>
         )}
 
-        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+        <div className="bg-gray-800/50 rounded-2xl shadow-xl p-6 md:p-8 border border-gray-700">
           <div className="text-center mb-6">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Flappy Bird</h1>
+            <h1 className="text-3xl font-bold text-white mb-2">Flappy Bird</h1>
           </div>
 
           <div className="flex justify-center space-x-8 mb-6">
             <div className="text-center">
-              <p className="text-gray-600 text-sm">Score</p>
-              <p className="text-3xl font-bold text-cyan-600">{score}</p>
+              <p className="text-gray-400 text-sm">Score</p>
+              <p className="text-3xl font-bold text-cyan-400">{score}</p>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center space-x-1">
-                <Trophy className="w-4 h-4 text-yellow-600" />
-                <p className="text-gray-600 text-sm">Best</p>
+                <Trophy className="w-4 h-4 text-yellow-500" />
+                <p className="text-gray-400 text-sm">Best</p>
               </div>
-              <p className="text-3xl font-bold text-yellow-600">{highScore}</p>
+              <p className="text-3xl font-bold text-yellow-500">{highScore}</p>
             </div>
           </div>
 
@@ -328,14 +328,14 @@ const FlappyBirdGame = () => {
                   e.stopPropagation();
                   resetGame();
                 }}
-                className="flex items-center space-x-2 px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors"
+                className="flex items-center space-x-2 px-6 py-3 bg-gray-600 hover:bg-gray-500 text-white rounded-lg transition-colors"
               >
                 <RotateCcw className="w-5 h-5" />
                 <span>Reset</span>
               </button>
             </div>
 
-            <p className="text-gray-600 text-sm mt-4 text-center">
+            <p className="text-gray-400 text-sm mt-4 text-center">
               Click, tap, or press SPACE/UP to flap
             </p>
           </div>

@@ -218,19 +218,19 @@ const PacManGame = () => {
   }, [gameOver, isPaused]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-yellow-100 py-8 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-8 px-4">
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition-colors"
+            className="flex items-center space-x-2 text-gray-300 hover:text-orange-400 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span className="font-medium">Back to Games</span>
           </button>
           <button
             onClick={() => setShowRules(!showRules)}
-            className="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition-colors"
+            className="flex items-center space-x-2 text-gray-300 hover:text-orange-400 transition-colors"
           >
             <Info className="w-5 h-5" />
             <span className="font-medium">Rules</span>
@@ -238,53 +238,53 @@ const PacManGame = () => {
         </div>
 
         {showRules && (
-          <div className="bg-white rounded-xl p-6 mb-6 shadow-lg border border-orange-200">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">How to Play Pac-Man</h3>
-            <ul className="space-y-2 text-gray-600">
+          <div className="bg-gray-800/50 rounded-xl p-6 mb-6 shadow-lg border border-gray-700">
+            <h3 className="text-xl font-bold text-white mb-4">How to Play Pac-Man</h3>
+            <ul className="space-y-2 text-gray-300">
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-orange-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 mr-3"></span>
                 <span>Use arrow keys to navigate Pac-Man through the maze</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-orange-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 mr-3"></span>
                 <span>Eat all dots to complete the level and advance</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-orange-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 mr-3"></span>
                 <span>Small dots = 10 points, Large dots (power pellets) = 50 points</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-orange-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 mr-3"></span>
                 <span>Avoid ghosts or lose a life</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-orange-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 mr-3"></span>
                 <span>Eat power pellets to temporarily become invincible</span>
               </li>
               <li className="flex items-start">
-                <span className="w-1.5 h-1.5 bg-orange-600 rounded-full mt-2 mr-3"></span>
+                <span className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 mr-3"></span>
                 <span>Game speed increases with each level (progressive difficulty)</span>
               </li>
             </ul>
           </div>
         )}
 
-        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+        <div className="bg-gray-800/50 rounded-2xl shadow-xl p-6 md:p-8 border border-gray-700">
           <div className="flex flex-col md:flex-row items-center justify-between mb-6 space-y-4 md:space-y-0">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">Pac-Man</h1>
+              <h1 className="text-3xl font-bold text-white mb-2">Pac-Man</h1>
             </div>
             <div className="flex space-x-6">
               <div className="text-center">
-                <p className="text-gray-600 text-sm">Score</p>
-                <p className="text-2xl font-bold text-orange-600">{score}</p>
+                <p className="text-gray-400 text-sm">Score</p>
+                <p className="text-2xl font-bold text-orange-400">{score}</p>
               </div>
               <div className="text-center">
-                <p className="text-gray-600 text-sm">Level</p>
-                <p className="text-2xl font-bold text-yellow-600">{level}</p>
+                <p className="text-gray-400 text-sm">Level</p>
+                <p className="text-2xl font-bold text-yellow-400">{level}</p>
               </div>
               <div className="text-center">
-                <p className="text-gray-600 text-sm">Lives</p>
+                <p className="text-gray-400 text-sm">Lives</p>
                 <div className="flex space-x-1">
                   {[...Array(lives)].map((_, i) => (
                     <Heart key={i} className="w-6 h-6 text-red-500 fill-red-500" />
@@ -293,10 +293,10 @@ const PacManGame = () => {
               </div>
               <div className="text-center">
                 <div className="flex items-center space-x-1">
-                  <Trophy className="w-4 h-4 text-yellow-600" />
-                  <p className="text-gray-600 text-sm">Best</p>
+                  <Trophy className="w-4 h-4 text-yellow-500" />
+                  <p className="text-gray-400 text-sm">Best</p>
                 </div>
-                <p className="text-2xl font-bold text-yellow-600">{highScore}</p>
+                <p className="text-2xl font-bold text-yellow-500">{highScore}</p>
               </div>
             </div>
           </div>
@@ -393,21 +393,21 @@ const PacManGame = () => {
                 <button
                   onClick={() => setIsPaused(!isPaused)}
                   disabled={gameOver}
-                  className="flex items-center space-x-2 px-6 py-3 bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-white rounded-lg transition-colors"
+                  className="flex items-center space-x-2 px-6 py-3 bg-orange-600 hover:bg-orange-700 disabled:bg-gray-600 text-white rounded-lg transition-colors"
                 >
                   {isPaused ? <Play className="w-5 h-5" /> : <Pause className="w-5 h-5" />}
                   <span>{isPaused ? 'Start' : 'Pause'}</span>
                 </button>
                 <button
                   onClick={resetGame}
-                  className="flex items-center space-x-2 px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors"
+                  className="flex items-center space-x-2 px-6 py-3 bg-gray-600 hover:bg-gray-500 text-white rounded-lg transition-colors"
                 >
                   <RotateCcw className="w-5 h-5" />
                   <span>Reset</span>
                 </button>
               </div>
 
-              <p className="text-gray-600 text-sm text-center">
+              <p className="text-gray-400 text-sm text-center">
                 Use arrow keys to move | Press SPACE to pause
               </p>
             </div>
