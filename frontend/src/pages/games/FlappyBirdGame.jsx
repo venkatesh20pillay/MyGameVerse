@@ -154,6 +154,11 @@ const FlappyBirdGame = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-8 px-4">
+      <SEO 
+        path="/flappy-bird"
+        title="Flappy Bird - Play Free Online"
+        description="Play Flappy Bird online for free. Tap to flap through pipes in this addictive arcade game. Simple controls, challenging gameplay!"
+      />
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <button

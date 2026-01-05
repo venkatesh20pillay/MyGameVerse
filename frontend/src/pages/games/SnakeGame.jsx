@@ -161,6 +161,11 @@ const SnakeGame = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-8 px-4">
+      <SEO 
+        path="/snake"
+        title="Snake Game - Play Free Online"
+        description="Play the classic Snake game online for free. Use arrow keys to control the snake, eat food to grow, avoid walls and yourself. Progressive difficulty!"
+      />
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">

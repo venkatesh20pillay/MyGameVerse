@@ -224,6 +224,11 @@ const TetrisGame = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-8 px-4">
+      <SEO 
+        path="/tetris"
+        title="Tetris - Play Free Online"
+        description="Play Tetris online for free. Arrange falling blocks to clear lines. Classic puzzle game with progressive difficulty and high score tracking."
+      />
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <button

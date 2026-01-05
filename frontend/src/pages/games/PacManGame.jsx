@@ -220,6 +220,11 @@ const PacManGame = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-8 px-4">
+      <SEO 
+        path="/pacman"
+        title="Pac-Man - Play Free Online"
+        description="Play Pac-Man online for free. Navigate mazes, eat dots, avoid ghosts, and collect power pellets. Classic arcade action with multiple levels!"
+      />
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <button

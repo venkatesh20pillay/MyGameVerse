@@ -5,6 +5,11 @@ import { Shield, Lock, Eye, HardDrive, AlertCircle } from 'lucide-react';
 const PrivacyPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
+      <SEO 
+        path="/privacy"
+        title="Privacy Policy"
+        description="Multi Game Verse privacy policy. Learn how we handle your data - we use only local storage, no personal data collection."
+      />
       <Navbar />
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">

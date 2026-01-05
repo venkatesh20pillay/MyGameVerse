@@ -170,6 +170,11 @@ const TicTacToe = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-8 px-4">
+      <SEO 
+        path="/tic-tac-toe"
+        title="Tic Tac Toe - Play Free Online vs AI or Friend"
+        description="Play Tic Tac Toe online for free. Challenge the AI or play with a friend. Classic 3-in-a-row game with smart computer opponent."
+      />
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <button

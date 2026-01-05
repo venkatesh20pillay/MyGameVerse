@@ -174,6 +174,11 @@ const WordleGame = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 py-8 px-4">
+      <SEO 
+        path="/wordle"
+        title="Wordle Unlimited - Play Free Online"
+        description="Play unlimited Wordle games online for free. Guess the 5-letter word in 6 tries. No daily limit - play as many times as you want!"
+      />
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <button
