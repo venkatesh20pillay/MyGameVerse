@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 import HomePage from './pages/HomePage';
 import SnakeGame from './pages/games/SnakeGame';
@@ -13,23 +14,25 @@ import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/snake" element={<SnakeGame />} />
-          <Route path="/tic-tac-toe" element={<TicTacToe />} />
-          <Route path="/wordle" element={<WordleGame />} />
-          <Route path="/tetris" element={<TetrisGame />} />
-          <Route path="/pacman" element={<PacManGame />} />
-          <Route path="/flappy-bird" element={<FlappyBirdGame />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-          {/* 404 Catch-all route - must be last */}
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <HelmetProvider>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/snake" element={<SnakeGame />} />
+            <Route path="/tic-tac-toe" element={<TicTacToe />} />
+            <Route path="/wordle" element={<WordleGame />} />
+            <Route path="/tetris" element={<TetrisGame />} />
+            <Route path="/pacman" element={<PacManGame />} />
+            <Route path="/flappy-bird" element={<FlappyBirdGame />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            {/* 404 Catch-all route - must be last */}
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </HelmetProvider>
   );
 }
 
