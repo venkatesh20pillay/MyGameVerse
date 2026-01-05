@@ -52,6 +52,11 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
+      <SEO 
+        path="/"
+        title="Free Classic Arcade Games Online"
+        description="Play 6 classic arcade games free online - Snake, Tetris, Pac-Man, Wordle, Tic-Tac-Toe & Flappy Bird. No downloads, instant play, mobile-optimized."
+      />
       <Navbar />
       
       {/* Hero Section */}
