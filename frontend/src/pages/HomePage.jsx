@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import GameCard from '../components/GameCard';
+import SEO from '../components/SEO';
 import { Sparkles, Zap, Target, Grid3x3, AlignJustify, Bird, Ghost } from 'lucide-react';
 
 const HomePage = () => {
