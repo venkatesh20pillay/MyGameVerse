@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Play, RotateCcw, Trophy, Info } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 const GAME_WIDTH = 400;
 const GAME_HEIGHT = 600;

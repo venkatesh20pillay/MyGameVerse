@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Play, Pause, RotateCcw, Trophy, Info } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 const GRID_SIZE = 20;
 const CELL_SIZE = 20;

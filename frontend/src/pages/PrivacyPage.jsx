@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import SEO from '../components/SEO';
 import { Shield, Lock, Eye, HardDrive, AlertCircle } from 'lucide-react';
 
 const PrivacyPage = () => {

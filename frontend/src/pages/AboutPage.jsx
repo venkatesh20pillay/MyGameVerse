@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import SEO from '../components/SEO';
 import { Heart, Users, Gamepad2, Sparkles } from 'lucide-react';
 
 const AboutPage = () => {

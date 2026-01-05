@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, RotateCcw, Trophy, Info, Users, Cpu } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 const TicTacToe = () => {
   const navigate = useNavigate();

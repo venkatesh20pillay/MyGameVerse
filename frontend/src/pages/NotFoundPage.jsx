@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { Home, Gamepad2, Search, AlertCircle } from 'lucide-react';
 import Navbar from '../components/Navbar';
+import SEO from '../components/SEO';
 
 const NotFoundPage = () => {
   const navigate = useNavigate();

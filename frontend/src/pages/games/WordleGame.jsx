@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, RotateCcw, Info, Trophy } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 const WORD_LIST = [
   'REACT', 'GAMES', 'CHESS', 'MUSIC', 'DANCE', 'BEACH', 'PHONE', 'LIGHT', 'PLANT', 'HORSE',
