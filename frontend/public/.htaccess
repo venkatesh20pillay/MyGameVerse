@@ -1,13 +1,13 @@
-# Force HTTPS and redirect www to non-www
+# Force HTTPS and redirect non-www to www
 RewriteEngine On
 
-# 1. Redirect HTTP to HTTPS (for all requests)
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+# Redirect all traffic to https://www.multigameverse.com
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.multigameverse\.com$ [NC]
+RewriteRule ^(.*)$ https://www.multigameverse.com/$1 [R=301,L]
 
-# 2. Redirect www to non-www (after HTTPS)
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+# Fix legacy /Multi URL: redirect to homepage (avoid soft 404)
+RewriteRule ^Multi/?$ / [R=301,L]
 
 # 3. Handle React Router - serve index.html for all routes
 RewriteCond %{REQUEST_FILENAME} !-f

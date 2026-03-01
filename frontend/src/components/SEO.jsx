@@ -7,8 +7,8 @@ const SEO = ({
   type = 'website',
   image = '/og-image.png'
 }) => {
-  const baseUrl = 'https://multigameverse.com';
-  const fullUrl = `${baseUrl}${path}`;
+  const baseUrl = 'https://www.multigameverse.com';
+  const fullUrl = path ? `${baseUrl}${path}` : `${baseUrl}/`;
   const fullTitle = title ? `${title} | Multi Game Verse` : 'Multi Game Verse - Free Classic Arcade Games Online';
   const defaultDescription = 'Play 6 classic arcade games free online - Snake, Tetris, Pac-Man, Wordle, Tic-Tac-Toe & Flappy Bird. No downloads, instant play, mobile-optimized retro gaming experience.';
 
