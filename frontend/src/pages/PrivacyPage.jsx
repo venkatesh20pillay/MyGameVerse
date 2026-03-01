@@ -20,8 +20,8 @@ const PrivacyPage = () => {
               Privacy Policy
             </h1>
           </div>
-          
-          <p className="text-gray-500 text-sm mb-8">Last updated: January 2025</p>
+          <p className="text-gray-500 text-sm mb-2">Last updated: January 2025</p>
+          <p className="text-gray-400 text-xs mb-8">Updated on Jan 2026</p>
 
           <div className="prose prose-lg max-w-none">
             <div className="bg-cyan-500/10 border border-cyan-500/20 rounded-xl p-6 mb-8">

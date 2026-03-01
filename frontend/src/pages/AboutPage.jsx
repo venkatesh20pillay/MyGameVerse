@@ -17,6 +17,7 @@ const AboutPage = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             About Multi Game Verse
           </h1>
+          <p className="text-sm text-gray-400 mb-6">Updated on Jan 2026</p>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-300 text-lg leading-relaxed mb-6">

@@ -68,6 +68,7 @@ const HomePage = () => {
               Modern Experience
             </span>
           </h1>
+          <p className="text-sm text-gray-400 mb-4">Updated on Jan 2026</p>
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
             Play timeless arcade classics reimagined for today. No downloads, no accounts – just pure gaming fun with Snake, Tetris, Pac-Man, Wordle, Tic-Tac-Toe, and Flappy Bird.
           </p>
